@@ -1,11 +1,11 @@
 import Header from '../components/Header';
-import Search from '../components/Search';
+import SearchBar from '../components/SearchBar';
 
 export default function Layout(props) {
   return (
     <>
       <Header />
-      <Search />
+      <SearchBar />
       {props.children}
     </>
   );

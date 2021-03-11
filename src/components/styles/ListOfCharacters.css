@@ -1,3 +1,7 @@
+.listContainer {
+  min-height: 100vh;
+}
+
 .listOfCharacters {
   display: flex;
   flex-wrap: wrap;

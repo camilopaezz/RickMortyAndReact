@@ -1,14 +1,26 @@
 import ListOfCharacters from '../components/ListOfCharacters';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import useObserver from '../hooks/useObserver';
 
 export default function CharactersPage() {
-  const [page, changePage] = useState(0);
-  const addPage = () => changePage(page + 1);
+  const ref = useRef(null);
+
+  const [page, setPage] = useState(0);
+  const isIntersecting = useObserver(ref);
+
+  useEffect(() => {
+    if (isIntersecting) {
+      setPage(page + 1);
+    }
+  }, [isIntersecting]);
+
   return (
     <div>
       <h1>All Characters:</h1>
-      <ListOfCharacters page={page} />
-      <button onClick={addPage}>Load more...</button>
+      <div className='listContainer'>
+        <ListOfCharacters page={page} />
+      </div>
+      <div ref={ref}></div>
     </div>
   );
 }
