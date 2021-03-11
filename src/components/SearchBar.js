@@ -1,5 +1,5 @@
 import { useLocation } from 'wouter';
-import './styles/Search.css';
+import './styles/SearchBar.css';
 
 export default function Search() {
   const [location, setLocation] = useLocation();

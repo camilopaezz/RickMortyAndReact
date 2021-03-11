@@ -3,7 +3,8 @@
   width: 85%;
   justify-content: center;
   max-width: 500px;
-  margin-top: 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .searchForm input[type='text'] {
