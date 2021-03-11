@@ -2,7 +2,7 @@ import ListOfCharacters from '../components/ListOfCharacters';
 import { useState } from 'react';
 
 export default function CharactersPage() {
-  const [page, changePage] = useState(1);
+  const [page, changePage] = useState(0);
   const addPage = () => changePage(page + 1);
   return (
     <div>

@@ -1,17 +1,20 @@
 import { useEffect, useState } from 'react';
-import fetchCharacters from '../services/fetchCharacters';
+import { getCharacter } from 'rickmortyapi';
 
-export default function useAllCharacters(page) {
-  const url = `character/?page=${page}`;
-
-  const [characters, updateCharacters] = useState([]);
-  const [loading, changeLoadState] = useState(true);
+export default function useAllCharacters(page, limit = 12) {
+  const [characters, setCharacters] = useState([]);
+  const [loading, setLoadState] = useState(true);
 
   useEffect(() => {
-    fetchCharacters(url).then((response) => {
-      console.log(response);
-      updateCharacters([...characters, ...response.results]);
-      changeLoadState(false);
+    const base = page * limit;
+    const IDs = [];
+    for (let i = 1; i <= limit; i++) {
+      IDs.push(base + i);
+    }
+
+    getCharacter(IDs).then((character) => {
+      setCharacters([].concat(characters, character));
+      setLoadState(false);
     });
   }, [page]);
 
