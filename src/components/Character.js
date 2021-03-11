@@ -1,10 +1,11 @@
-import useCharacters from "../hooks/useCharacters";
-import Loading from "./Loading";
+import useOneCharacters from '../hooks/useOneCharacter';
+import Loading from './Loading';
+import './styles/Character.css';
 
-const API = "https://rickandmortyapi.com/api/character/";
+const API = 'https://rickandmortyapi.com/api/character/';
 
 export default function Character({ id }) {
-  const { characters: character, loading } = useCharacters(`${API}${id}`);
+  const { character, loading } = useOneCharacters(id);
 
   if (loading) {
     return <Loading />;
@@ -12,7 +13,7 @@ export default function Character({ id }) {
 
   if (!loading) {
     return (
-      <>
+      <div className='character'>
         <h1>{character.name}</h1>
         <img src={character.image} alt={character.name} />
         <div>
@@ -26,7 +27,7 @@ export default function Character({ id }) {
             <b>Gender:</b> {character.gender}
           </p>
         </div>
-      </>
+      </div>
     );
   }
 }

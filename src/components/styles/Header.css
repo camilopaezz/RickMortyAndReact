@@ -1,0 +1,13 @@
+.header {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header img {
+  width: 80%;
+  max-width: 500px;
+  cursor: pointer;
+}

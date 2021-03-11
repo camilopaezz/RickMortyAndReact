@@ -1,0 +1,22 @@
+.listOfCharacters {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1500px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.listOfCharacters__item {
+  margin: 30px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  overflow-y: hidden;
+  max-width: 500px;
+  width: 250px;
+}
+
+.listOfCharacters__item img {
+  width: 250px;
+  height: 250px;
+}

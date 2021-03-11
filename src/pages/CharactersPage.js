@@ -1,12 +1,12 @@
-import ListOfCharacters from "../components/ListOfCharacters";
-import { useState } from "react";
+import ListOfCharacters from '../components/ListOfCharacters';
+import { useState } from 'react';
 
-export default function Home() {
+export default function CharactersPage() {
   const [page, changePage] = useState(1);
   const addPage = () => changePage(page + 1);
   return (
-    <div className="App">
-      <h1>Rick & Morty API</h1>
+    <div>
+      <h1>All Characters:</h1>
       <ListOfCharacters page={page} />
       <button onClick={addPage}>Load more...</button>
     </div>

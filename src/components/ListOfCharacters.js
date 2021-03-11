@@ -1,12 +1,12 @@
-import { Link } from "wouter";
+import './styles/ListOfCharacters.css';
 
-import useCharacters from "../hooks/useCharacters";
-import Loading from "./Loading";
-
-const API = "https://rickandmortyapi.com/api/character/?page=";
+import useAllCharacters from '../hooks/useAllCharacters';
+import Loading from './Loading';
+import { Link } from 'wouter';
 
 export default function ListOfCharacters({ page }) {
-  const { characters, loading } = useCharacters(`${API}${page}`);
+  const { characters, loading } = useAllCharacters(page);
+
   if (loading) {
     return <Loading />;
   }
@@ -14,18 +14,18 @@ export default function ListOfCharacters({ page }) {
   if (!loading) {
     return (
       <>
-        {characters.results.map((character) => {
-          return (
+        <div className='listOfCharacters'>
+          {characters.map((character) => (
             <Link
+              key={character.id}
               to={`/character/${character.id}`}
-              className="character"
-              key={`${character.id}-${page}`}
+              className='listOfCharacters__item'
             >
-              <img loading="lazy" src={character.image} alt={character.name} />
+              <img loading='lazy' src={character.image} alt={character.name} />
               <p>{character.name}</p>
             </Link>
-          );
-        })}
+          ))}
+        </div>
       </>
     );
   }

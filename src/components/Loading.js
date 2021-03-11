@@ -1,5 +1,9 @@
-import "./styles/Loading.css";
+import './styles/Loading.css';
 
 export default function Loading() {
-  return <div className="Spinner"></div>;
+  return (
+    <div className='spinner__container'>
+      <div className='spinner'></div>
+    </div>
+  );
 }
