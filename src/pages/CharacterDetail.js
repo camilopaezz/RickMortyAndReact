@@ -1,4 +1,3 @@
-import { Link } from 'wouter';
 import Character from '../components/Character';
 
 export default function CharacterDetail({ params }) {
