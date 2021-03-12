@@ -8,6 +8,8 @@ export default function CharactersPage() {
   const [page, setPage] = useState(0)
   const isIntersecting = useObserver(ref)
 
+  useEffect(() => setPage(0), [])
+
   useEffect(() => {
     if (isIntersecting) {
       setPage(page + 1)
