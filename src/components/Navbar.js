@@ -1,10 +1,10 @@
-import { Link } from 'wouter';
-import './styles/Navbar.css';
+import { Link } from 'wouter'
+import './styles/Navbar.css'
 
 const items = [
   { route: '/', data: 'Home' },
   { route: '/character', data: 'Characters' },
-];
+]
 
 export default function Navbar() {
   return (
@@ -15,5 +15,5 @@ export default function Navbar() {
         </li>
       ))}
     </ul>
-  );
+  )
 }

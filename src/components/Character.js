@@ -1,14 +1,14 @@
-import useOneCharacters from '../hooks/useOneCharacter';
-import Loading from './Loading';
-import './styles/Character.css';
+import useOneCharacters from '../hooks/useOneCharacter'
+import Loading from './Loading'
+import './styles/Character.css'
 
-const API = 'https://rickandmortyapi.com/api/character/';
+const API = 'https://rickandmortyapi.com/api/character/'
 
 export default function Character({ id }) {
-  const { character, loading } = useOneCharacters(id);
+  const { character, loading } = useOneCharacters(id)
 
   if (loading) {
-    return <Loading />;
+    return <Loading />
   }
 
   if (!loading) {
@@ -28,6 +28,6 @@ export default function Character({ id }) {
           </p>
         </div>
       </div>
-    );
+    )
   }
 }

@@ -1,18 +1,18 @@
-import ListOfCharacters from '../components/ListOfCharacters';
-import { useEffect, useRef, useState } from 'react';
-import useObserver from '../hooks/useObserver';
+import ListOfCharacters from '../components/ListOfCharacters'
+import { useEffect, useRef, useState } from 'react'
+import useObserver from '../hooks/useObserver'
 
 export default function CharactersPage() {
-  const ref = useRef(null);
+  const ref = useRef(null)
 
-  const [page, setPage] = useState(0);
-  const isIntersecting = useObserver(ref);
+  const [page, setPage] = useState(0)
+  const isIntersecting = useObserver(ref)
 
   useEffect(() => {
     if (isIntersecting) {
-      setPage(page + 1);
+      setPage(page + 1)
     }
-  }, [isIntersecting]);
+  }, [isIntersecting])
 
   return (
     <div>
@@ -22,5 +22,5 @@ export default function CharactersPage() {
       </div>
       <div ref={ref}></div>
     </div>
-  );
+  )
 }

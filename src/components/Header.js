@@ -1,9 +1,9 @@
-import headerImage from '../images/Rick_and_Morty.svg';
-import Navbar from '../components/Navbar';
+import headerImage from '../images/Rick_and_Morty.svg'
+import Navbar from '../components/Navbar'
 
-import { Link } from 'wouter';
+import { Link } from 'wouter'
 
-import './styles/Header.css';
+import './styles/Header.css'
 
 export default function Header() {
   return (
@@ -13,5 +13,5 @@ export default function Header() {
       </Link>
       <Navbar />
     </div>
-  );
+  )
 }
