@@ -5,7 +5,7 @@ import Loading from './Loading'
 import { Link } from 'wouter'
 
 export default function ListOfCharacters({ page }) {
-  const { characters, loading } = useAllCharacters(page)
+  const { characters, loading } = useAllCharacters(page === -1 ? 0 : page)
 
   if (loading) {
     return <Loading />

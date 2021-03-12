@@ -5,12 +5,11 @@ import useObserver from '../hooks/useObserver'
 export default function CharactersPage() {
   const ref = useRef(null)
 
-  const [page, setPage] = useState(0)
+  const [page, setPage] = useState(-1) //A BUG THAT I CAN UNDERSTAND
   const isIntersecting = useObserver(ref)
 
-  useEffect(() => setPage(0), [])
-
   useEffect(() => {
+    console.log(isIntersecting)
     if (isIntersecting) {
       setPage(page + 1)
     }
