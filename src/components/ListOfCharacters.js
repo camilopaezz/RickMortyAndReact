@@ -1,11 +1,15 @@
 import './styles/ListOfCharacters.css'
 
 import useAllCharacters from '../hooks/useAllCharacters'
+import useSearchCharacters from '../hooks/useSearchCharacters'
+
 import Loading from './Loading'
 import { Link } from 'wouter'
 
-export default function ListOfCharacters({ page }) {
-  const { characters, loading } = useAllCharacters(page === -1 ? 0 : page)
+export default function ListOfCharacters({ page, name }) {
+  const { characters, loading } = name
+    ? useSearchCharacters({ name, page })
+    : useAllCharacters(page)
 
   if (loading) {
     return <Loading />

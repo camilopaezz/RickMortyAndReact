@@ -7,6 +7,7 @@ export default function Search() {
   const handleSearch = (e) => {
     e.preventDefault()
     setLocation(`/search/?name=${e.target[0].value}`)
+    window.location.reload()
   }
 
   return (

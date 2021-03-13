@@ -1,20 +1,29 @@
 import { useEffect, useState } from 'react'
 import { getCharacter } from 'rickmortyapi'
 
-export default function useSearchCharacters(props = null) {
-  if (!props) return
-
-  const [results, setResults] = useState({})
+export default function useSearchCharacters({ name, page }) {
+  const [characters, setCharacters] = useState([])
   const [loading, setLoadState] = useState(true)
-  const [maxPages, setMaxPages] = useState(0)
+  const [maxPages, setMaxPages] = useState(1)
 
   useEffect(() => {
-    getCharacter(props).then((response) => {
-      setResults([].concat(results, response.results))
-      setMaxPages(response.info.pages)
-      setLoadState(false)
-    })
-  }, [])
+    if (page <= maxPages) {
+      getCharacter({ name, page }).then((response) => {
+        setLoadState(true)
+        if (!response.error && page <= response.info.pages) {
+          if (response.info.pages > 1) {
+            setMaxPages(response.info.pages)
+            setCharacters([].concat(characters, response.results))
+          }
+          if (page !== response.info.pages) {
+            setMaxPages(response.info.pages)
+            setCharacters([].concat(characters, response.results))
+          }
+        }
+        setLoadState(false)
+      })
+    }
+  }, [page])
 
-  return { results, loading, maxPages }
+  return { characters, loading }
 }

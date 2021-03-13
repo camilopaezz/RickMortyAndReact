@@ -1,27 +1,34 @@
 import qs from 'querystring'
-// import { useRef } from 'react'
-// import useObserver from '../hooks/useObserver'
-import useSearchCharacters from '../hooks/useSearchCharacters'
+import ListOfCharacters from '../components/ListOfCharacters'
+import { useEffect, useRef, useState } from 'react'
+import useObserver from '../hooks/useObserver'
 
 export default function SearchPage() {
-  // const ref = useRef(null)
-  // const isIntersecting = useObserver(ref)
+  const { name } = qs.decode(location.search.replace('?', ''))
 
-  const query = qs.decode(location.search.replace('?', ''))
-  const { results, loading, maxPages } = useSearchCharacters(query)
+  const ref = useRef(null)
+  const [page, setPage] = useState(0)
+  const isIntersecting = useObserver(ref)
 
-  if (loading) {
-    return <p>loading...</p>
-  }
+  useEffect(() => {
+    if (isIntersecting) {
+      setPage(page + 1)
+    }
+  }, [isIntersecting])
 
-  console.log(results)
+  setTimeout(() => {
+    if (ref.current) {
+      ref.current.style.display = 'block'
+    }
+  }, 600)
 
   return (
     <>
       <h1>Resultados de búsqueda</h1>
-      {results.map((result) => (
-        <p key={`${result.id}${result.name}`}>{result.name}</p>
-      ))}
+      <div>
+        <ListOfCharacters name={name} page={page} />
+      </div>
+      <div style={{ display: 'none' }} ref={ref}></div>
     </>
   )
 }
