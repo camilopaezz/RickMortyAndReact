@@ -7,7 +7,7 @@ export default function SearchPage() {
   const { name } = qs.decode(location.search.replace('?', ''))
 
   const ref = useRef(null)
-  const [page, setPage] = useState(0)
+  const [page, setPage] = useState(1)
   const isIntersecting = useObserver(ref)
 
   useEffect(() => {

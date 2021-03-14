@@ -1,5 +1,4 @@
 import headerImage from '../images/Rick_and_Morty.svg'
-import Navbar from '../components/Navbar'
 
 import { Link } from 'wouter'
 
@@ -9,9 +8,8 @@ export default function Header() {
   return (
     <div className='header'>
       <Link to='/'>
-        <img src={headerImage} alt='Logo' />
+        <img style={{ marginBlockEnd: '50px' }} src={headerImage} alt='Logo' />
       </Link>
-      <Navbar />
     </div>
   )
 }
