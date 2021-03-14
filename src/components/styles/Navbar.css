@@ -15,4 +15,10 @@
   color: white;
   text-decoration: none;
   font-weight: 600;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+  transition-property: color;
+}
+
+.navbar__item a:hover {
+  color: #777;
 }
