@@ -3,7 +3,7 @@ import { useLocation } from 'wouter'
 
 import './SearchBar.css'
 
-export default function Search() {
+export default function SearchBar() {
   const [_, setLocation] = useLocation()
   const ref = useRef()
 

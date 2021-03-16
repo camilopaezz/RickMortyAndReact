@@ -1,11 +1,11 @@
 import Header from 'components/Header'
-import SearchBar from 'components/SearchBar'
+import Navbar from 'components/Navbar'
 
 export default function Layout(props) {
   return (
     <>
       <Header />
-      <SearchBar />
+      <Navbar />
       {props.children}
     </>
   )

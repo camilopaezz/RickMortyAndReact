@@ -1,6 +1,7 @@
 import ListOfCharacters from 'components/ListOfCharacter'
 import { useEffect, useRef, useState } from 'react'
 import useObserver from 'hooks/useObserver'
+import Search from 'components/SearchBar'
 
 export default function CharactersPage() {
   const ref = useRef(null)
@@ -22,6 +23,7 @@ export default function CharactersPage() {
 
   return (
     <div>
+      <Search />
       <h1>All Characters:</h1>
       <div>
         <ListOfCharacters page={page} />
