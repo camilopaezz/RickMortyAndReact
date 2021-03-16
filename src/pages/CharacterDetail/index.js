@@ -1,4 +1,4 @@
-import Character from '../components/Character'
+import Character from 'components/CharacterInfo'
 
 export default function CharacterDetail({ params }) {
   return (

@@ -1,9 +1,9 @@
-import './styles/ListOfCharacters.css'
+import './ListOfCharacters.css'
 
-import useAllCharacters from '../hooks/useAllCharacters'
-import useSearchCharacters from '../hooks/useSearchCharacters'
+import useAllCharacters from 'hooks/useAllCharacters'
+import useSearchCharacters from 'hooks/useSearchCharacters'
 
-import Loading from './Loading'
+import Loading from 'components/Loading'
 import { Link } from 'wouter'
 
 export default function ListOfCharacters({ page, name }) {

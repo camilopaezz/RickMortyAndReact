@@ -1,8 +1,8 @@
-import headerImage from '../images/Rick_and_Morty.svg'
+import headerImage from 'images/Rick_and_Morty.svg'
 
 import { Link } from 'wouter'
 
-import './styles/Header.css'
+import './Header.css'
 
 export default function Header() {
   return (

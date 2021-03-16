@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { useLocation } from 'wouter'
 
-import './styles/SearchBar.css'
+import './SearchBar.css'
 
 export default function Search() {
   const [_, setLocation] = useLocation()

@@ -1,7 +1,7 @@
 import qs from 'querystring'
-import ListOfCharacters from '../components/ListOfCharacters'
+import ListOfCharacters from 'components/ListOfCharacter'
 import { useEffect, useRef, useState } from 'react'
-import useObserver from '../hooks/useObserver'
+import useObserver from 'hooks/useObserver'
 
 export default function SearchPage() {
   const { name } = qs.decode(location.search.replace('?', ''))

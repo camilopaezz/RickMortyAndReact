@@ -1,6 +1,6 @@
-import useOneCharacters from '../hooks/useOneCharacter'
-import Loading from './Loading'
-import './styles/Character.css'
+import useOneCharacters from 'hooks/useOneCharacter'
+import Loading from 'components/Loading'
+import './CharacterInfo.css'
 
 const API = 'https://rickandmortyapi.com/api/character/'
 
