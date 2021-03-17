@@ -11,14 +11,8 @@ export default function useSearchCharacters({ name, page }) {
       getCharacter({ name, page }).then((response) => {
         setLoadState(true)
         if (!response.error && page <= response.info.pages) {
-          if (response.info.pages > 1) {
-            setMaxPages(response.info.pages)
-            setCharacters([].concat(characters, response.results))
-          }
-          if (page !== response.info.pages) {
-            setMaxPages(response.info.pages)
-            setCharacters([].concat(characters, response.results))
-          }
+          setMaxPages(response.info.pages)
+          setCharacters([].concat(characters, response.results))
         }
         setLoadState(false)
       })

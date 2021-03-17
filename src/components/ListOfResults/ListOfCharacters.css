@@ -1,0 +1,38 @@
+.listContainer {
+  min-height: 100vh;
+}
+
+.listOfCharacters {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1500px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.listOfCharacters__item {
+  margin: 30px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  overflow-y: hidden;
+  max-width: 500px;
+  width: 250px;
+}
+
+.listOfCharacters__item img {
+  width: 250px;
+  height: 250px;
+}
+
+.listOfCharacters__item {
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+  transition-property: opacity;
+}
+
+.listOfCharacters__item:hover {
+  opacity: 0.6;
+}

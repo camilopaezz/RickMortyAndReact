@@ -1,10 +1,9 @@
-import qs from 'querystring'
-import ListOfCharacters from 'components/ListOfCharacter'
 import { useEffect, useRef, useState } from 'react'
 import useObserver from 'hooks/useObserver'
+import ListOfResults from 'components/ListOfResults'
 
-export default function SearchPage() {
-  const { name } = qs.decode(location.search.replace('?', ''))
+export default function SearchPage({ params }) {
+  const { name } = params
 
   const ref = useRef(null)
   const [page, setPage] = useState(1)
@@ -26,7 +25,7 @@ export default function SearchPage() {
     <>
       <h1>Resultados de búsqueda</h1>
       <div>
-        <ListOfCharacters name={name} page={page} />
+        <ListOfResults name={name} page={page} />
       </div>
       <div style={{ display: 'none' }} ref={ref}></div>
     </>

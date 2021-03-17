@@ -23,7 +23,6 @@ export default function CharactersPage() {
 
   return (
     <div>
-      <Search />
       <h1>All Characters:</h1>
       <div>
         <ListOfCharacters page={page} />

@@ -1,21 +1,26 @@
-import { Route } from 'wouter'
+import { Route, Switch } from 'wouter'
 
 import CharactersPage from 'pages/CharactersPage'
 import CharacterDetail from 'pages/CharacterDetail'
 import SearchPage from 'pages/SearchPage'
-import Error404 from 'pages/Error404'
+import Navbar from 'components/Navbar'
+import HomePage from 'pages/HomePage'
+import React from 'react'
 
-import Layout from 'components/Layout'
+const Error404 = React.lazy(() => import('pages/Error404'))
 
 export default function App() {
   return (
     <div className='App'>
-      <Layout>
-        <Route path='/' component={CharactersPage} />
+      <Navbar />
+      <Switch>
+        <Route path='/' component={HomePage} />
         <Route path='/search/' component={SearchPage} />
+        <Route path='/search/:name' component={SearchPage} />
+        <Route path='/character' component={CharactersPage} />
         <Route path='/character/:id' component={CharacterDetail} />
-        <Route path='/:rest' component={Error404}></Route>
-      </Layout>
+        <Route component={Error404}></Route>
+      </Switch>
     </div>
   )
 }

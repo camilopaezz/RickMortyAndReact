@@ -1,12 +1,12 @@
 import './ListOfCharacters.css'
 
-import useAllCharacters from 'hooks/useAllCharacters'
+import useSearchCharacters from 'hooks/useSearchCharacters'
 
 import Loading from 'components/Loading'
 import { Link } from 'wouter'
 
-export default function ListOfCharacters({ page }) {
-  const { characters, loading } = useAllCharacters(page)
+export default function ListOfResults({ page, name }) {
+  const { characters, loading } = useSearchCharacters({ name, page })
 
   if (loading) {
     return <Loading />
