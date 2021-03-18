@@ -1,4 +1,4 @@
-import { Link } from 'wouter'
+import { Link } from 'react-router-dom'
 import navImage from 'images/Rick_and_Morty.svg'
 import SearchBar from 'components/SearchBar'
 

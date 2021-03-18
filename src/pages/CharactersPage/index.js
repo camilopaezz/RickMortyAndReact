@@ -1,11 +1,9 @@
 import ListOfCharacters from 'components/ListOfCharacter'
 import { useEffect, useRef, useState } from 'react'
 import useObserver from 'hooks/useObserver'
-import Search from 'components/SearchBar'
 
 export default function CharactersPage() {
   const ref = useRef(null)
-
   const [page, setPage] = useState(0)
   const isIntersecting = useObserver(ref)
 

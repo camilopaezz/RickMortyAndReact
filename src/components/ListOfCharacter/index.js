@@ -3,7 +3,7 @@ import './ListOfCharacters.css'
 import useAllCharacters from 'hooks/useAllCharacters'
 
 import Loading from 'components/Loading'
-import { Link } from 'wouter'
+import { Link } from 'react-router-dom'
 
 export default function ListOfCharacters({ page }) {
   const { characters, loading } = useAllCharacters(page)

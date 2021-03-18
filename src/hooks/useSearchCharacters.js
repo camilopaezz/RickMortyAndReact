@@ -19,5 +19,18 @@ export default function useSearchCharacters({ name, page }) {
     }
   }, [page])
 
+  useEffect(() => {
+    if (page <= maxPages) {
+      getCharacter({ name, page }).then((response) => {
+        setLoadState(true)
+        if (!response.error && page <= response.info.pages) {
+          setMaxPages(response.info.pages)
+          setCharacters(response.results)
+        }
+        setLoadState(false)
+      })
+    }
+  }, [name])
+
   return { characters, loading }
 }

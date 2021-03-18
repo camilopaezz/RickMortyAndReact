@@ -8,7 +8,7 @@
     "@babel/runtime": "7.13.8",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-loading-skeleton": "^2.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "rickmortyapi": "^0.3.0",
     "wouter": "^2.7.4"

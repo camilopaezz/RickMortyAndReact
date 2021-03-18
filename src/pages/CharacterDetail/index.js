@@ -1,9 +1,11 @@
 import Character from 'components/CharacterInfo'
+import { useParams } from 'react-router'
 
-export default function CharacterDetail({ params }) {
+export default function CharacterDetail() {
+  const { id } = useParams()
   return (
     <>
-      <Character id={params.id} />
+      <Character id={id} />
     </>
   )
 }

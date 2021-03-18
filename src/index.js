@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom'
 import './global.css'
 
 import App from './App'
-import Error404 from 'pages/Error404'
+import Loading from 'components/Loading'
 
 const rootElement = document.getElementById('root')
 ReactDOM.render(
-  <Suspense fallback={Error404}>
+  <Suspense fallback={Loading}>
     <App />
   </Suspense>,
   rootElement,
