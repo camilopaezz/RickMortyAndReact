@@ -42,8 +42,8 @@ export default function Character({ data }) {
               const id = episode.replace('https://rickandmortyapi.com/api/episode/', '')
               return (
                 <>
-                  <Link to={`/episode/${id}`}>{id}</Link>
-                  <i>, </i>
+                  <Link to={`/episode/${id}`}>{id},</Link>
+                  <i> </i>
                 </>
               )
             })}
