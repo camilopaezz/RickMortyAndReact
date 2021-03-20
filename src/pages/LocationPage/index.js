@@ -1,13 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
 import useObserver from 'hooks/useObserver'
-import { useParams } from 'react-router'
-import ListOfCharacters from 'components/ListOfCharacter'
+import { useRef, useState, useEffect } from 'react'
+import ListOfLocations from 'components/ListOfLocations'
 
-export default function SearchPage() {
-  const { name = '' } = useParams()
-
+export default function LocationPage() {
   const ref = useRef(null)
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState(0)
   const isIntersecting = useObserver(ref)
 
   useEffect(() => {
@@ -15,10 +12,6 @@ export default function SearchPage() {
       setPage(page + 1)
     }
   }, [isIntersecting])
-
-  useEffect(() => {
-    setPage(1)
-  }, [name])
 
   setTimeout(() => {
     if (ref.current) {
@@ -28,9 +21,9 @@ export default function SearchPage() {
 
   return (
     <>
-      <h1>Resultados de búsqueda de {name}</h1>
+      <h1>All locations</h1>
       <div>
-        <ListOfCharacters name={name} page={page} />
+        <ListOfLocations page={page} />
       </div>
       <div style={{ display: 'none' }} ref={ref}></div>
     </>

@@ -13,6 +13,14 @@ const NavbarItems = [
     text: 'Characters',
     to: '/character',
   },
+  {
+    text: 'Location',
+    to: '/location',
+  },
+  {
+    text: 'Episode',
+    to: '/episode',
+  },
 ]
 
 export default function Navbar() {

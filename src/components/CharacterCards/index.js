@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
 
-function CharacterCard({ data }) {
+function CharacterCardBase({ data }) {
   return (
     <Link to={`/character/${data.id}`} className='listOfCharacters__item'>
       <img loading='lazy' src={data.image} alt={data.name} />
@@ -10,4 +10,7 @@ function CharacterCard({ data }) {
   )
 }
 
-export default CharacterCard
+const CharacterCard = React.memo(CharacterCardBase)
+const CharacterCardResults = CharacterCardBase
+
+export { CharacterCard, CharacterCardResults }
