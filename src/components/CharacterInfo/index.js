@@ -38,9 +38,9 @@ export default function Character({ data }) {
           </p>
           <p className='info__data'>
             <b>Episodes: </b>
-            {data.episode.map((episode) => {
+            {data.episode.map((episode, index, array) => {
               const id = episode.replace('https://rickandmortyapi.com/api/episode/', '')
-              if (data.episode.length === 1) {
+              if (array[index] === array.length - 1) {
                 return (
                   <>
                     <Link to={`/episode/${id}`}>{id}</Link>
