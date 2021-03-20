@@ -1,33 +1,55 @@
-import useOneCharacters from 'hooks/useOneCharacter'
-import Loading from 'components/Loading'
 import './CharacterInfo.css'
+import { Link } from 'react-router-dom'
 
-const API = 'https://rickandmortyapi.com/api/character/'
+export default function Character({ data }) {
+  console.log(data.status === 'Alive')
 
-export default function Character({ id }) {
-  const { character, loading } = useOneCharacters(id)
-
-  if (loading) {
-    return <Loading />
-  }
-
-  if (!loading) {
-    return (
-      <div className='character'>
-        <h1>{character.name}</h1>
-        <img src={character.image} alt={character.name} />
-        <div>
-          <p>
-            <b>Status:</b> {character.status}
+  return (
+    <>
+      <div className='character-detail'>
+        <div className='character-detail__image'>
+          <img src={data.image} alt={data.name} />
+        </div>
+        <div className='character-detail__info'>
+          <h2>{data.name}</h2>
+          <p className='info__data'>
+            <b>Id: </b>
+            {data.id}
           </p>
-          <p>
-            <b>Species:</b> {character.species}
+          <p className='info__data'>
+            <b>Status: </b>
+            {data.status}
           </p>
-          <p>
-            <b>Gender:</b> {character.gender}
+          <p className='info__data'>
+            <b>Type: </b>
+            {data.type}
+          </p>
+          <p className='info__data'>
+            <b>Gender: </b>
+            {data.gender}
+          </p>
+          <p className='info__data'>
+            <b>Origin: </b>
+            <Link to={`/`}>{data.origin.name}</Link>
+          </p>
+          <p className='info__data'>
+            <b>Location: </b>
+            <Link to={`/`}>{data.location.name}</Link>
+          </p>
+          <p className='info__data'>
+            <b>Episodes: </b>
+            {data.episode.map((episode) => {
+              const id = episode.replace('https://rickandmortyapi.com/api/episode/', '')
+              return (
+                <>
+                  <Link to={`/episode/${id}`}>{id}</Link>
+                  <i>, </i>
+                </>
+              )
+            })}
           </p>
         </div>
       </div>
-    )
-  }
+    </>
+  )
 }

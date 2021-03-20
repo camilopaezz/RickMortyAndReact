@@ -8,7 +8,7 @@ import Loading from 'components/Loading'
 
 const rootElement = document.getElementById('root')
 ReactDOM.render(
-  <Suspense fallback={Loading}>
+  <Suspense fallback={<Loading />}>
     <App />
   </Suspense>,
   rootElement,

@@ -55,14 +55,15 @@
   transform: translateY(-2px);
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 769px) {
   .navbar {
     justify-content: center;
-    margin-block-start: 20px;
-    padding-block-end: 20px;
+    padding-block-start: 30px;
+    padding-block-end: 30px;
   }
 
   .navbar__right {
+    display: grid;
     justify-content: center;
   }
 
