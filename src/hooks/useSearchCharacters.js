@@ -6,8 +6,6 @@ export default function useSearchCharacters({ name, page }) {
   const [loading, setLoadState] = useState(true)
   const [maxPages, setMaxPages] = useState(1)
 
-  console.log(characters)
-
   useEffect(() => {
     if (page <= maxPages) {
       getCharacter({ name, page }).then((response) => {

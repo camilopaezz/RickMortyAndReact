@@ -1,4 +1,4 @@
-import useOneCharacters from 'hooks/useOneCharacter'
+import useOneCharacters from 'hooks/useSingleCharacter'
 import Loading from 'components/Loading'
 
 import Character from 'components/CharacterInfo'

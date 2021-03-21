@@ -21,7 +21,7 @@ export default function LocationPage() {
 
   return (
     <>
-      <h1>All locations</h1>
+      <h1>All locations:</h1>
       <div>
         <ListOfLocations page={page} />
       </div>

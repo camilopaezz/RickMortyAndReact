@@ -12,6 +12,7 @@ const SearchPage = React.lazy(() => import('pages/SearchPage'))
 const HomePage = React.lazy(() => import('pages/HomePage'))
 const Error404 = React.lazy(() => import('pages/Error404'))
 const LocationPage = React.lazy(() => import('pages/LocationPage'))
+const LocationDetail = React.lazy(() => import('pages/LocationDetail'))
 
 export default function App() {
   return (
@@ -26,7 +27,7 @@ export default function App() {
           <Route exact path='/character' component={CharactersPage} />
           <Route exact path='/character/:id' component={CharacterDetail} />
           <Route exact path='/location' component={LocationPage} />
-          <Route exact path='/location/:id' component={LocationPage} />
+          <Route exact path='/location/:id' component={LocationDetail} />
           <Route component={Error404}></Route>
         </Switch>
       </Router>

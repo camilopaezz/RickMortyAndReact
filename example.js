@@ -1,4 +1,4 @@
-const { getLocation, getCharacter } = require('rickmortyapi')
+const { getLocation } = require('rickmortyapi')
 
 async function f(page, limit = 12) {
   const base = page * limit
@@ -6,7 +6,7 @@ async function f(page, limit = 12) {
   for (let i = 1; i <= limit; i++) {
     IDs.push(base + i)
   }
-  const locations = await getCharacter(IDs)
+  const locations = await getLocation(IDs)
   console.log(locations)
 }
 

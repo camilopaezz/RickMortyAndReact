@@ -28,6 +28,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s width;
   border-radius: 7px;
   background-color: rgba(255, 255, 255, 0.6);
 }
