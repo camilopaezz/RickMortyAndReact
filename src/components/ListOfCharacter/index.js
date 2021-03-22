@@ -1,10 +1,10 @@
 import './ListOfCharacters.css'
 
-import Loading from 'components/Loading'
-import { CharacterCard } from 'components/CharacterCards'
+import Loading from '@components/Loading'
+import { CharacterCard } from '@components/CharacterCards'
 
-import useSearchCharacters from 'hooks/useSearchCharacters'
-import useAllCharacters from 'hooks/useAllCharacters'
+import useSearchCharacters from '@hooks/useSearchCharacters'
+import useAllCharacters from '@hooks/useAllCharacters'
 
 export default function ListOfCharacters({ page, name = null }) {
   const { characters, loading } = name

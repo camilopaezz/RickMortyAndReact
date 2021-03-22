@@ -1,4 +1,4 @@
-import notFound from 'images/notFound.png'
+import notFound from '@images/notFound.png'
 import './Error404.css'
 
 export default function Error404() {

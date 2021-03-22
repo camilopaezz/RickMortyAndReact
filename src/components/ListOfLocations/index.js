@@ -1,6 +1,6 @@
-import Loading from 'components/Loading'
-import LocationCard from 'components/LocationCard'
-import useAllLocations from 'hooks/useAllLocations'
+import Loading from '@components/Loading'
+import LocationCard from '@components/LocationCard'
+import useAllLocations from '@hooks/useAllLocations'
 
 import './ListOfLocations.css'
 

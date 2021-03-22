@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import useObserver from 'hooks/useObserver'
+import useObserver from '@hooks/useObserver'
 import { useParams } from 'react-router'
-import ListOfCharacters from 'components/ListOfCharacter'
+import ListOfCharacters from '@components/ListOfCharacter'
 
 export default function SearchPage() {
   const { name = '' } = useParams()
