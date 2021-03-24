@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { Route, Switch } from 'react-router-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 
 import ScrollToTop from '@components/ScrollToTop'
 import Navbar from '@components/Navbar'
@@ -14,7 +13,7 @@ const Error404 = React.lazy(() => import('@pages/Error404'))
 const LocationPage = React.lazy(() => import('@pages/LocationPage'))
 const LocationDetail = React.lazy(() => import('@pages/LocationDetail'))
 
-function App() {
+function App () {
   return (
     <div className='App'>
       <Router>
@@ -28,7 +27,7 @@ function App() {
           <Route exact path='/character/:id' component={CharacterDetail} />
           <Route exact path='/location' component={LocationPage} />
           <Route exact path='/location/:id' component={LocationDetail} />
-          <Route component={Error404}></Route>
+          <Route component={Error404} />
         </Switch>
       </Router>
     </div>

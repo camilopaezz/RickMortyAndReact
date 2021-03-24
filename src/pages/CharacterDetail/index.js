@@ -4,7 +4,7 @@ import Loading from '@components/Loading'
 import Character from '@components/CharacterInfo'
 import { useParams } from 'react-router'
 
-export default function CharacterDetail() {
+export default function CharacterDetail () {
   const { id } = useParams()
   const { character, loading } = useSingleCharacters(id)
 

@@ -11,5 +11,5 @@ ReactDOM.render(
   <Suspense fallback={<Loading />}>
     <App />
   </Suspense>,
-  rootElement,
+  rootElement
 )
