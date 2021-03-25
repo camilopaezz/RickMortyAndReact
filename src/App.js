@@ -21,7 +21,7 @@ function App () {
         <Navbar />
         <Switch>
           <Route exact path='/' component={HomePage} />
-          <Route exact path='/search/' component={SearchPage} />
+          <Route exact path='/search/' component={CharactersPage} />
           <Route exact path='/search/:name' component={SearchPage} />
           <Route exact path='/character' component={CharactersPage} />
           <Route exact path='/character/:id' component={CharacterDetail} />

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
 
-function CharacterCardBase({ data }) {
+function CharacterCardBase ({ data }) {
   return (
     <Link to={`/character/${data.id}`} className='listOfCharacters__item'>
       <img loading='lazy' src={data.image} alt={data.name} />

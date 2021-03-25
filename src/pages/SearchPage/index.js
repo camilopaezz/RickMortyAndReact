@@ -3,7 +3,7 @@ import useObserver from '@hooks/useObserver'
 import { useParams } from 'react-router'
 import ListOfCharacters from '@components/ListOfCharacter'
 
-export default function SearchPage() {
+export default function SearchPage () {
   const { name = '' } = useParams()
 
   const ref = useRef(null)
@@ -32,7 +32,7 @@ export default function SearchPage() {
       <div>
         <ListOfCharacters name={name} page={page} />
       </div>
-      <div style={{ display: 'none' }} ref={ref}></div>
+      <div style={{ display: 'none' }} ref={ref} />
     </>
   )
 }

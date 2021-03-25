@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getCharacter } from 'rickmortyapi'
 
-export default function useSearchCharacters({ name, page }) {
+export default function useSearchCharacters ({ name, page }) {
   const [characters, setCharacters] = useState([])
   const [loading, setLoadState] = useState(true)
   const [maxPages, setMaxPages] = useState(1)
@@ -32,8 +32,8 @@ export default function useSearchCharacters({ name, page }) {
             name: 'NOTHING HERE...',
             image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/1200px-Unknown_person.jpg',
-            id: '1000000',
-          },
+            id: '1'
+          }
         ])
       }
       setLoadState(false)

@@ -21,6 +21,10 @@ h2 {
   font-size: 1.8rem;
 }
 
+b {
+  color: #777;
+}
+
 body::-webkit-scrollbar {
   background-color: #171717;
   width: 10px;
