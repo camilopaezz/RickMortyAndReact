@@ -13,7 +13,7 @@ const config = (env) => {
     entry: ['./src/index.js'],
     mode: isDevelopment ? 'development' : 'production',
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'build'),
       filename: 'bundle.[contenthash].js',
       publicPath: '/'
     },
@@ -61,11 +61,6 @@ const config = (env) => {
       historyApiFallback: true,
       open: true,
       hot: true
-    },
-    optimization: {
-      splitChunks: {
-        chunks: 'all'
-      }
     },
     plugins: [
       new NodePolyfillPlugin(),

@@ -3,5 +3,5 @@
     ["@babel/preset-react", { "runtime": "automatic" }],
     ["@babel/preset-env", { "modules": false }]
   ],
-  "plugins": ["@babel/plugin-transform-runtime", "react-refresh/babel"]
+  "plugins": ["@babel/plugin-transform-runtime"]
 }
