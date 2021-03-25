@@ -80,7 +80,7 @@ const config = (env) => {
       new CleanPlugin(),
       isDevelopment ? new HotModuleReplacementPlugin() : false,
       isDevelopment ? new ReactRefreshWebpackPlugin() : false
-    ]
+    ].filter(Boolean)
   }
 }
 
