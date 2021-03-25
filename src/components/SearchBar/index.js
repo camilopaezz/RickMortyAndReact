@@ -10,7 +10,6 @@ export default function SearchBar () {
 
   const handleSearch = (e) => {
     e.preventDefault()
-    console.log(keyword.length)
     if (keyword === ' '.repeat(keyword.length)) {
       return null
     } else {
