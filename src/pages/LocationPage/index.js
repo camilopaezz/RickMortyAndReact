@@ -2,7 +2,7 @@ import useObserver from '@hooks/useObserver'
 import { useRef, useState, useEffect } from 'react'
 import ListOfLocations from '@components/ListOfLocations'
 
-export default function LocationPage() {
+export default function LocationPage () {
   const ref = useRef(null)
   const [page, setPage] = useState(0)
   const isIntersecting = useObserver(ref)
@@ -25,7 +25,7 @@ export default function LocationPage() {
       <div>
         <ListOfLocations page={page} />
       </div>
-      <div style={{ display: 'none' }} ref={ref}></div>
+      <div style={{ display: 'none' }} ref={ref} />
     </>
   )
 }

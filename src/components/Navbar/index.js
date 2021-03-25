@@ -7,23 +7,23 @@ import './Navbar.css'
 const NavbarItems = [
   {
     text: 'Home',
-    to: '/',
+    to: '/'
   },
   {
     text: 'Characters',
-    to: '/character',
+    to: '/character'
   },
   {
     text: 'Location',
-    to: '/location',
+    to: '/location'
   },
   {
     text: 'Episode',
-    to: '/episode',
-  },
+    to: '/episode'
+  }
 ]
 
-export default function Navbar() {
+export default function Navbar () {
   return (
     <nav className='navbar'>
       <div className='navbar__logo'>
@@ -32,7 +32,7 @@ export default function Navbar() {
         </Link>
       </div>
       <div className='navbar__right'>
-        <ul>
+        <ul className='navbar__ul'>
           {NavbarItems.map(({ text, to }) => (
             <li key={text} className='navbar__item'>
               <Link to={to}>{text}</Link>

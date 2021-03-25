@@ -3,6 +3,8 @@
   justify-content: flex-end;
   margin: 0;
   min-width: 270px;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .searchForm input[type='text']:focus {

@@ -1,12 +1,25 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
 
-function CharacterCardCompact({ data }) {
+import './CharacterCardCompact.css'
+
+function CharacterCardCompact ({ data }) {
   return (
-    <Link to={`/character/${data.id}`} className='characterCompact'>
-      <h3>{data.name}</h3>
-      <p>{data.id}</p>
-      <p>{data.status}</p>
+    <Link className='x' to={`/character/${data.id}`}>
+      <div className='characterCompact'>
+        <h2>
+          {data.name}
+        </h2>
+        <p>
+          <b>Id: </b>{data.id}
+        </p>
+        <p>
+          <b>Status: </b>{data.status}
+        </p>
+        <p>
+          <b>Gender: </b>{data.gender}
+        </p>
+      </div>
     </Link>
   )
 }

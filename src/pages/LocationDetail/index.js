@@ -3,7 +3,9 @@ import useSingleLocation from '@hooks/useSingleLocation'
 import Loading from '@components/Loading'
 import ListOfCharactersCompact from '@components/ListOfCharactersCompact'
 
-export default function LocationDetail() {
+import './LocationDetail.css'
+
+export default function LocationDetail () {
   const { id } = useParams()
   const { locationData, loading } = useSingleLocation(id)
 
@@ -17,12 +19,10 @@ export default function LocationDetail() {
 
   return (
     <div className='location'>
-      <h1 className='location__title'>{locationData.name}</h1>
+      <h1 className='location__title'>Location Info:</h1>
       <div className='location__content'>
-        <div className='content__residents'>
-          <ListOfCharactersCompact ids={ids} />
-        </div>
         <div className='content__info'>
+          <h2>{locationData.name}</h2>
           <p>
             <b>Id: </b>
             {locationData.id}
@@ -35,6 +35,9 @@ export default function LocationDetail() {
             <b>Dimension: </b>
             {locationData.dimension}
           </p>
+        </div>
+        <div className='content__residents'>
+          <ListOfCharactersCompact ids={ids} />
         </div>
       </div>
     </div>
