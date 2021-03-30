@@ -2,6 +2,47 @@
   margin-bottom: 25px;
 }
 
-.home p {
+.home > p {
   color: #aaa;
+  margin-bottom: 60px;
+}
+
+.home__content {
+  text-align: left;
+  width: 90%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin: 0 auto;
+  gap: 60px;
+  grid-template-areas: 'characters history';
+}
+
+.content__history {
+  grid-area: history;
+}
+
+.content__history a {
+  color: #888;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s color;
+}
+
+.content__history a:hover {
+  color: #444;
+}
+
+.content__recommended {
+  grid-area: characters;
+}
+
+@media screen and (max-width: 1025px) {
+  .home__content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 0;
+    text-align: center;
+    grid-template-areas:
+      'history'
+      'characters';
+  }
 }

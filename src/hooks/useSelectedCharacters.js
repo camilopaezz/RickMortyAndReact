@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getCharacter } from 'rickmortyapi'
 
-export default function useSelectedCharacters(ids) {
+export default function useSelectedCharacters (ids) {
   const [characters, setCharacters] = useState([])
   const [loading, setLoadState] = useState(true)
 

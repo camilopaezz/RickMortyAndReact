@@ -1,9 +1,15 @@
 import getHistory from '@utils/getHistory'
+import getRandomNumbers from '@utils/getRandomNumbers'
+
 import { Link } from 'react-router-dom'
+import ListOfCharactersCompact from '@components/ListOfCharactersCompact'
+
 import './HomePage.css'
+const MANY = 4
 
 export default function HomePage () {
   const history = getHistory()
+  const randomIds = getRandomNumbers(MANY)
 
   const historyEmpty = history.length === 0 ? <p>Nothing here...</p> : null
 
@@ -14,6 +20,7 @@ export default function HomePage () {
       <div className='home__content'>
         <div className='content__recommended'>
           <h3>Some interesting Characters</h3>
+          <ListOfCharactersCompact ids={randomIds} />
         </div>
         <div className='content__history'>
           <h3>Latest Search</h3>

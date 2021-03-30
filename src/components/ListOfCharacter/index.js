@@ -6,7 +6,7 @@ import { CharacterCard } from '@components/CharacterCards'
 import useSearchCharacters from '@hooks/useSearchCharacters'
 import useAllCharacters from '@hooks/useAllCharacters'
 
-export default function ListOfCharacters({ page, name = null }) {
+export default function ListOfCharacters ({ page, name = null }) {
   const { characters, loading } = name
     ? useSearchCharacters({ name, page })
     : useAllCharacters(page)
