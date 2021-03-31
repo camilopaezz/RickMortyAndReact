@@ -61,7 +61,6 @@
   .content__residents,
   .content__info {
     width: 100%;
-    border: 1px solid red;
     overflow: visible;
     max-height: max-content;
   }
