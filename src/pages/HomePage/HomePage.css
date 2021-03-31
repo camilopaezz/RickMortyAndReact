@@ -1,5 +1,9 @@
 .home h1 {
   margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
 }
 
 .home > p {
@@ -44,5 +48,23 @@
     grid-template-areas:
       'history'
       'characters';
+  }
+  .react-logo {
+    height: 2.4rem;
+  }
+}
+
+.react-logo {
+  height: 3rem;
+  margin-left: 10px;
+  animation: linear infinite 5s spin;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

@@ -1,5 +1,6 @@
 import getHistory from '@utils/getHistory'
 import getRandomNumbers from '@utils/getRandomNumbers'
+import Logo from '@images/react.svg'
 
 import { Link } from 'react-router-dom'
 import ListOfCharactersCompact from '@components/ListOfCharactersCompact'
@@ -15,7 +16,10 @@ export default function HomePage () {
 
   return (
     <div className='home'>
-      <h1>Welcome to Rick Morty And React 👏</h1>
+      <h1>
+        Welcome to Rick Morty And React
+        <img src={Logo} alt='React' className='react-logo' />
+      </h1>
       <p>This is react-app that use the fantastic RickAndMortyAPI</p>
       <div className='home__content'>
         <div className='content__recommended'>
