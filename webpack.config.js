@@ -76,7 +76,10 @@ const config = (env) => {
       new CleanPlugin(),
       new CopyPlugin({
         patterns: [
-          { from: 'public/robots.txt', to: 'robots.txt' }
+          { from: 'public/robots.txt', to: 'robots.txt' },
+          { from: 'public/manifest.json', to: 'manifest.json' },
+          { from: 'public/icon.png', to: 'icon.png' },
+          { from: 'public/favicon.png', to: 'favicon.png' }
         ]
       }),
       isDevelopment ? new HotModuleReplacementPlugin() : false,
