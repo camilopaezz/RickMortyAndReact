@@ -1,5 +1,6 @@
 const path = require('path')
 
+const CopyPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
@@ -73,6 +74,11 @@ const config = (env) => {
         filename: 'styles/[name].css'
       }),
       new CleanPlugin(),
+      new CopyPlugin({
+        patterns: [
+          { from: 'public/robots.txt', to: 'robots.txt' }
+        ]
+      }),
       isDevelopment ? new HotModuleReplacementPlugin() : false,
       isDevelopment ? new ReactRefreshWebpackPlugin() : false
     ].filter(Boolean)
