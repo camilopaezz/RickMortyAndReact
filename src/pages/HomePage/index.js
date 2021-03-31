@@ -18,7 +18,7 @@ export default function HomePage () {
   return (
     <>
       <Helmet>
-        <title>Home | Rick Morty And React</title>
+        <title>Rick Morty And React</title>
       </Helmet>
       <div className='home'>
         <h1>
