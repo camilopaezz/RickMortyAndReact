@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import useObserver from '@hooks/useObserver'
 import { useParams } from 'react-router'
 import ListOfCharacters from '@components/ListOfCharacter'
+import { Helmet } from 'react-helmet'
 
 export default function SearchPage () {
   const { name = '' } = useParams()
@@ -28,6 +29,9 @@ export default function SearchPage () {
 
   return (
     <>
+      <Helmet>
+        <title>{`Results of ${name} | Rick Morty And React`}</title>
+      </Helmet>
       <h1>Resultados de búsqueda de {name}</h1>
       <div>
         <ListOfCharacters name={name} page={page} />

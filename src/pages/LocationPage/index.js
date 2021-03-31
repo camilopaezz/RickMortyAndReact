@@ -1,6 +1,7 @@
 import useObserver from '@hooks/useObserver'
 import { useRef, useState, useEffect } from 'react'
 import ListOfLocations from '@components/ListOfLocations'
+import { Helmet } from 'react-helmet'
 
 export default function LocationPage () {
   const ref = useRef(null)
@@ -21,6 +22,9 @@ export default function LocationPage () {
 
   return (
     <>
+      <Helmet>
+        <title>All Locations | Rick Morty And React</title>
+      </Helmet>
       <h1>All locations:</h1>
       <div>
         <ListOfLocations page={page} />

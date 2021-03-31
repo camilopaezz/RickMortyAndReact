@@ -2,6 +2,7 @@ import getHistory from '@utils/getHistory'
 import getRandomNumbers from '@utils/getRandomNumbers'
 import Logo from '@images/react.svg'
 
+import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import ListOfCharactersCompact from '@components/ListOfCharactersCompact'
 
@@ -15,23 +16,27 @@ export default function HomePage () {
   const historyEmpty = history.length === 0 ? <p>Nothing here...</p> : null
 
   return (
-    <div className='home'>
-      <h1>
-        Welcome to Rick Morty And React
-        <img src={Logo} alt='React' className='react-logo' />
-      </h1>
-      <p>This is react-app that use the fantastic RickAndMortyAPI</p>
-      <div className='home__content'>
-        <div className='content__recommended'>
-          <h3>Some interesting Characters</h3>
-          <ListOfCharactersCompact ids={randomIds} />
-        </div>
-        <div className='content__history'>
-          <h3>Latest Search</h3>
-          {
+    <>
+      <Helmet>
+        <title>Home | Rick Morty And React</title>
+      </Helmet>
+      <div className='home'>
+        <h1>
+          Welcome to Rick Morty And React
+          <img src={Logo} alt='React' className='react-logo' />
+        </h1>
+        <p>This is react-app that use the fantastic RickAndMortyAPI</p>
+        <div className='home__content'>
+          <div className='content__recommended'>
+            <h3>Some interesting Characters</h3>
+            <ListOfCharactersCompact ids={randomIds} />
+          </div>
+          <div className='content__history'>
+            <h3>Latest Search</h3>
+            {
             historyEmpty
           }
-          {
+            {
             history.map(({ name, link }, index) => {
               return (
                 <Link key={index} to={link}>
@@ -41,8 +46,9 @@ export default function HomePage () {
               )
             })
           }
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }

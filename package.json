@@ -7,6 +7,7 @@
   "dependencies": {
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
     "rickmortyapi": "^0.3.0",
     "stream-http": "^3.1.1"

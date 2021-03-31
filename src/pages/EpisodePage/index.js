@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import useObserver from '@hooks/useObserver'
 import ListOfEpisodes from '@components/ListOfEpisodes'
+import { Helmet } from 'react-helmet'
 
 export default function EpisodesPage () {
   const ref = useRef(null)
@@ -20,12 +21,17 @@ export default function EpisodesPage () {
   }, 400)
 
   return (
-    <div>
-      <h1>All Episodes:</h1>
+    <>
+      <Helmet>
+        <title>All Episodes | Rick Morty And React</title>
+      </Helmet>
       <div>
-        <ListOfEpisodes page={page} />
+        <h1>All Episodes:</h1>
+        <div>
+          <ListOfEpisodes page={page} />
+        </div>
+        <div style={{ display: 'none' }} ref={ref} />
       </div>
-      <div style={{ display: 'none' }} ref={ref} />
-    </div>
+    </>
   )
 }
