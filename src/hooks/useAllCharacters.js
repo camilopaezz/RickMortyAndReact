@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getCharacter } from 'rickmortyapi'
 
-export default function useAllCharacters(page, limit = 12) {
+export default function useAllCharacters (page, limit = 12) {
   const [characters, setCharacters] = useState([])
   const [loading, setLoadState] = useState(true)
 

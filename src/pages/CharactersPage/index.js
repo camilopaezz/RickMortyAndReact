@@ -2,7 +2,7 @@ import ListOfCharacters from '@components/ListOfCharacter'
 import { useEffect, useRef, useState } from 'react'
 import useObserver from '@hooks/useObserver'
 
-export default function CharactersPage() {
+export default function CharactersPage () {
   const ref = useRef(null)
   const [page, setPage] = useState(0)
   const isIntersecting = useObserver(ref)
@@ -25,7 +25,7 @@ export default function CharactersPage() {
       <div>
         <ListOfCharacters page={page} />
       </div>
-      <div style={{ display: 'none' }} ref={ref}></div>
+      <div style={{ display: 'none' }} ref={ref} />
     </div>
   )
 }

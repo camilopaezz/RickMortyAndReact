@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { getLocation } from 'rickmortyapi'
+import { getEpisode } from 'rickmortyapi'
 
-export default function useAllLocations (page, limit = 12) {
-  const [locations, setLocations] = useState([])
+export default function useAllEpisodes (page, limit = 12) {
+  const [episodes, setEpisodes] = useState([])
   const [loading, setLoadState] = useState(true)
 
   useEffect(async () => {
@@ -13,13 +13,13 @@ export default function useAllLocations (page, limit = 12) {
     }
 
     try {
-      const results = await getLocation(IDs)
-      setLocations([].concat(locations, results))
+      const results = await getEpisode(IDs)
+      setEpisodes([].concat(episodes, results))
       setLoadState(false)
     } catch (error) {
       console.error(error)
     }
   }, [page])
 
-  return { locations, loading }
+  return { episodes, loading }
 }

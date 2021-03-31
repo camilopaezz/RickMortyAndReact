@@ -1,0 +1,31 @@
+.x {
+  text-decoration: none;
+}
+
+.characterCompact {
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  color: white;
+  border: 1px solid #666;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+  transition-property: color text-decoration transform;
+  margin-top: 5px;
+  text-align: start;
+}
+
+.characterCompact:hover {
+  transform: translateY(-3px);
+}
+
+.characterCompact h2 {
+  font-size: 1.7rem;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+  transition-property: color text-decoration transform;
+}
+
+.characterCompact:hover h2 {
+  color: #666;
+  text-decoration: underline;
+}
