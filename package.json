@@ -39,6 +39,12 @@
     "standard": "^16.0.3",
     "webpack": "^5.27.1",
     "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.1.14"
-  }
+    "webpack-dev-server": "^3.1.14",
+    "workbox-webpack-plugin": "^6.1.2"
+  },
+  "standard": {
+    "ignore": [
+      "webpack.config.js"
+    ]
+}
 }

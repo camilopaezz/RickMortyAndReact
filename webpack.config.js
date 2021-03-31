@@ -1,5 +1,6 @@
 const path = require('path')
 
+const WorkboxPlugin = require('workbox-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -64,6 +65,25 @@ const config = (env) => {
       hot: true
     },
     plugins: [
+      new WorkboxPlugin.GenerateSW({
+        navigateFallback: '/',
+        runtimeCaching: [
+          {
+            urlPattern: /.(jpg|png|svg)/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'images'
+            }
+          },
+          {
+            urlPattern: new RegExp('https://https://rickandmortyapi.com/api'),
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'api'
+            }
+          }
+        ]
+      }),
       new NodePolyfillPlugin(),
       new HtmlWebpackPlugin({
         filename: 'index.html',
@@ -78,7 +98,7 @@ const config = (env) => {
         patterns: [
           { from: 'public/robots.txt', to: 'robots.txt' },
           { from: 'public/manifest.json', to: 'manifest.json' },
-          { from: 'public/icon.png', to: 'icon.png' },
+          { from: 'public/icons', to: 'icons' },
           { from: 'public/favicon.png', to: 'favicon.png' }
         ]
       }),

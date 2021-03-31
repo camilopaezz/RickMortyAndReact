@@ -6,8 +6,6 @@ import './global.css'
 import App from './App'
 import Loading from '@components/Loading'
 
-console.log('fuck you')
-
 const rootElement = document.getElementById('root')
 ReactDOM.render(
   <Suspense fallback={<Loading />}>
