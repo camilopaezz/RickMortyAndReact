@@ -1,5 +1,4 @@
 import getHistory from '@utils/getHistory'
-import getRandomNumbers from '@utils/getRandomNumbers'
 import Logo from '@images/react.svg'
 
 import { Helmet } from 'react-helmet'
