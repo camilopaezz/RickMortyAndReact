@@ -7,11 +7,10 @@ import { Link } from 'react-router-dom'
 import ListOfCharactersCompact from '@components/ListOfCharactersCompact'
 
 import './HomePage.css'
-const MANY = 4
 
 export default function HomePage () {
   const history = getHistory()
-  const randomIds = getRandomNumbers(MANY)
+  const randomIds = [65, 24, 150, 170]
 
   const historyEmpty = history.length === 0 ? <p>Nothing here...</p> : null
 
