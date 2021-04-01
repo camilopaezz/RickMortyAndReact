@@ -80,8 +80,22 @@ const config = (env) => {
             }
           },
           {
+            urlPattern: /.(woff|woff2|ttf)/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'fonts'
+            }
+          },
+          {
+            urlPattern: /.(css|html|js)/,
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'assets'
+            }
+          },
+          {
             urlPattern: new RegExp('https://https://rickandmortyapi.com/api'),
-            handler: 'NetworkFirst',
+            handler: 'StaleWhileRevalidate',
             options: {
               cacheName: 'api'
             }
