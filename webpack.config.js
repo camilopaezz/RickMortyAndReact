@@ -45,7 +45,11 @@ const config = (env) => {
         {
           test: /\.txt$/,
           type: 'asset/source'
-        }
+        },
+        {
+          test: /\.(woff|woff2|eot|ttf|otf)$/,
+          type: 'asset/resource',
+        },
       ]
     },
     resolve: {
@@ -65,8 +69,7 @@ const config = (env) => {
       hot: true
     },
     plugins: [
-      new WorkboxPlugin.GenerateSW({
-        navigateFallback: '/',
+      !isDevelopment && new WorkboxPlugin.GenerateSW({
         runtimeCaching: [
           {
             urlPattern: /.(jpg|png|svg)/,

@@ -26,11 +26,11 @@ export default function HomePage () {
         <p>This is react-app that use the fantastic RickAndMortyAPI</p>
         <div className='home__content'>
           <div className='content__recommended'>
-            <h3>Some interesting Characters</h3>
+            <h2>Some interesting Characters</h2>
             <ListOfCharactersCompact ids={randomIds} />
           </div>
           <div className='content__history'>
-            <h3>Latest Search</h3>
+            <h2>Latest Search</h2>
             {
             historyEmpty
           }
