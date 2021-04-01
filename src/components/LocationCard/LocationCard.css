@@ -29,3 +29,9 @@ a:hover h2 {
   color: #888;
   text-decoration: underline #888;
 }
+
+@media screen and (max-width: 769px) {
+  .locationCard {
+    padding: 0 5%;
+  }
+}

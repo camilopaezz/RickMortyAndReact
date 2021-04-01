@@ -66,7 +66,8 @@ const config = (env) => {
       contentBase: './build',
       historyApiFallback: true,
       open: true,
-      hot: true
+      hot: true,
+      port: 3000
     },
     plugins: [
       !isDevelopment && new WorkboxPlugin.GenerateSW({
