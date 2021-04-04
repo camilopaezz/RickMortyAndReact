@@ -42,9 +42,9 @@
     "webpack-dev-server": "^3.1.14",
     "workbox-webpack-plugin": "^6.1.2"
   },
-  "standard": {
-    "ignore": [
-      "webpack.config.js"
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
     ]
-}
+  }
 }
