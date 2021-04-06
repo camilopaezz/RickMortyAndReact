@@ -13,10 +13,11 @@
     "stream-http": "^3.1.1"
   },
   "scripts": {
-    "build-dev": "webpack --env NODE_ENV=development",
-    "build-prod": "webpack --env NODE_ENV=production",
+    "build:dev": "webpack --env NODE_ENV=development",
+    "build:prod": "webpack --env NODE_ENV=production",
     "start": "webpack serve --env NODE_ENV=development",
-    "test": "jest"
+    "test": "jest",
+    "lint": "standard --fix"
   },
   "author": "Camilo Paez <cepn26@gmail.com>",
   "license": "MIT",

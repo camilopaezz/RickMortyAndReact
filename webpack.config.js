@@ -48,8 +48,8 @@ const config = (env) => {
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/,
-          type: 'asset/resource',
-        },
+          type: 'asset/resource'
+        }
       ]
     },
     resolve: {
@@ -94,10 +94,10 @@ const config = (env) => {
             }
           },
           {
-            urlPattern: new RegExp('https://https://rickandmortyapi.com/api'),
+            urlPattern: /https:$/i,
             handler: 'StaleWhileRevalidate',
             options: {
-              cacheName: 'api'
+              cacheName: 'external'
             }
           }
         ]

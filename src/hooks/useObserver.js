@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export default function useObserver(externalRef) {
+export default function useObserver (externalRef) {
   const [isIntersecting, setIntersecting] = useState(false)
   useEffect(() => {
     observer.observe(externalRef.current)
@@ -13,8 +13,8 @@ export default function useObserver(externalRef) {
     }
   }
 
-  const observer = new IntersectionObserver(observerCallback, {
-    rootMargin: '400px',
+  const observer = new window.IntersectionObserver(observerCallback, {
+    rootMargin: '400px'
   })
 
   return isIntersecting

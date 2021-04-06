@@ -1,24 +1,28 @@
 import './CharacterInfo.css'
 import { Link } from 'react-router-dom'
 
-export default function Character({ data }) {
+export default function Character ({ data }) {
   const link = 'https://rickandmortyapi.com/api/location/'
 
   const locationId = data.location.url.replace(link, '')
   const locationLink =
-    data.location.url === '' ? (
-      data.location.name
-    ) : (
-      <Link to={`/location/${locationId}`}>{data.location.name}</Link>
-    )
+    data.location.url === ''
+      ? (
+          data.location.name
+        )
+      : (
+        <Link to={`/location/${locationId}`}>{data.location.name}</Link>
+        )
 
   const originId = data.origin.url.replace(link, '')
   const originLink =
-    data.origin.url === '' ? (
-      data.origin.name
-    ) : (
-      <Link to={`/location/${originId}`}>{data.location.name}</Link>
-    )
+    data.origin.url === ''
+      ? (
+          data.origin.name
+        )
+      : (
+        <Link to={`/location/${originId}`}>{data.location.name}</Link>
+        )
 
   return (
     <>

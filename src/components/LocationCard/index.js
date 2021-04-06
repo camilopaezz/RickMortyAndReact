@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import React from 'react'
 import './LocationCard.css'
 
-function LocationCard({ data }) {
+function LocationCard ({ data }) {
   const { id, name, type, dimension } = data
 
   return (
