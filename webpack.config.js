@@ -69,6 +69,11 @@ const config = (env) => {
       hot: true,
       port: 3000
     },
+    optimization: {
+      splitChunks: {
+        chunks: 'all'
+      }
+    },
     plugins: [
       !isDevelopment && new WorkboxPlugin.GenerateSW({
         runtimeCaching: [
