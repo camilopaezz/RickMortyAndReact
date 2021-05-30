@@ -9,8 +9,7 @@
     "react-dom": "17.0.1",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
-    "rickmortyapi": "^0.3.0",
-    "stream-http": "^3.1.1"
+    "rickmortyapi": "^0.3.0"
   },
   "scripts": {
     "build:dev": "webpack --env NODE_ENV=development",

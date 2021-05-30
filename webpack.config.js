@@ -110,7 +110,7 @@ const config = (env) => {
       new NodePolyfillPlugin(),
       new HtmlWebpackPlugin({
         filename: 'index.html',
-        template: 'public/index.html',
+        template: isDevelopment ? 'public/index.dev.html' : 'public/index.html',
         inject: true
       }),
       new MiniCssExtractPlugin({
