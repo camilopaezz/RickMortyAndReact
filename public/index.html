@@ -11,6 +11,11 @@
     <meta name="apple-mobile-web-app-capable" content="no">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <script>
+      if (window.location.hostname !== 'localhost' && window.location.protocol === 'http:') {
+        window.location.protocol = 'https:'
+      }
+    </script>
     <title>Rick Morty And React</title>
   </head>
   <body>
