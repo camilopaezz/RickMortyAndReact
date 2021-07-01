@@ -1,6 +1,6 @@
-import ListOfCharacters from '@components/ListOfCharacter'
+import ListOfCharacters from '../../components/ListOfCharacter'
 import { useEffect, useRef, useState } from 'react'
-import useObserver from '@hooks/useObserver'
+import useObserver from '../../hooks/useObserver'
 import { Helmet } from 'react-helmet'
 
 export default function CharactersPage () {

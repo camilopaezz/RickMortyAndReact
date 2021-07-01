@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
-import useSingleLocation from '@hooks/useSingleLocation'
-import Loading from '@components/Loading'
-import ListOfCharactersCompact from '@components/ListOfCharactersCompact'
+import useSingleLocation from '../../hooks/useSingleLocation'
+import Loading from '../../components/Loading'
+import ListOfCharactersCompact from '../../components/ListOfCharactersCompact'
 import { Helmet } from 'react-helmet'
 
 import './LocationDetail.css'

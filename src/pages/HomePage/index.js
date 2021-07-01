@@ -1,9 +1,9 @@
-import getHistory from '@utils/getHistory'
-import Logo from '@images/react.svg'
+import getHistory from '../../utils/getHistory'
+import Logo from '../../images/react.svg'
 
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
-import ListOfCharactersCompact from '@components/ListOfCharactersCompact'
+import ListOfCharactersCompact from '../../components/ListOfCharactersCompact'
 
 import './HomePage.css'
 

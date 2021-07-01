@@ -1,7 +1,7 @@
-import useSingleCharacters from '@hooks/useSingleCharacter'
-import Loading from '@components/Loading'
+import useSingleCharacters from '../../hooks/useSingleCharacter'
+import Loading from '../../components/Loading'
 
-import Character from '@components/CharacterInfo'
+import Character from '../../components/CharacterInfo'
 import { useParams } from 'react-router'
 import { Helmet } from 'react-helmet'
 

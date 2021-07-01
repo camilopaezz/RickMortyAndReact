@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import useObserver from '@hooks/useObserver'
-import ListOfEpisodes from '@components/ListOfEpisodes'
+import useObserver from '../../hooks/useObserver'
+import ListOfEpisodes from '../../components/ListOfEpisodes'
 import { Helmet } from 'react-helmet'
 
 export default function EpisodesPage () {

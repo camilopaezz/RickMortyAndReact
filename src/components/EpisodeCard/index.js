@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './EpisodeCard.css'
 
 function EpisodeCard ({ data }) {

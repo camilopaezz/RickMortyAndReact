@@ -1,6 +1,6 @@
-import useObserver from '@hooks/useObserver'
+import useObserver from '../../hooks/useObserver'
 import { useRef, useState, useEffect } from 'react'
-import ListOfLocations from '@components/ListOfLocations'
+import ListOfLocations from '../../components/ListOfLocations'
 import { Helmet } from 'react-helmet'
 
 export default function LocationPage () {

@@ -1,6 +1,6 @@
-import Loading from '@components/Loading'
-import EpisodeCard from '@components/EpisodeCard'
-import useAllEpisodes from '@hooks/useAllEpisodes'
+import Loading from '../Loading'
+import EpisodeCard from '../EpisodeCard'
+import useAllEpisodes from '../../hooks/useAllEpisodes'
 
 import './ListOfEpisodes.css'
 

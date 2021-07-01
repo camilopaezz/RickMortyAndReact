@@ -53,14 +53,7 @@ const config = (env) => {
       ]
     },
     resolve: {
-      extensions: ['.js', '.jsx'],
-      alias: {
-        '@components': path.resolve(__dirname, 'src', 'components'),
-        '@hooks': path.resolve(__dirname, 'src', 'hooks'),
-        '@pages': path.resolve(__dirname, 'src', 'pages'),
-        '@images': path.resolve(__dirname, 'src', 'images'),
-        '@utils': path.resolve(__dirname, 'src', 'utils')
-      }
+      extensions: ['.js', '.jsx']
     },
     devServer: {
       contentBase: './build',
@@ -93,14 +86,14 @@ const config = (env) => {
           },
           {
             urlPattern: /.(css|html|js)/,
-            handler: 'StaleWhileRevalidate',
+            handler: 'NetworkFirst',
             options: {
               cacheName: 'assets'
             }
           },
           {
             urlPattern: /https:$/i,
-            handler: 'StaleWhileRevalidate',
+            handler: 'NetworkFirst',
             options: {
               cacheName: 'external'
             }

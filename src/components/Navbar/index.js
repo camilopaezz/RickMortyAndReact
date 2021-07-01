@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
-import navImage from '@images/Rick_and_Morty.svg'
-import SearchBar from '@components/SearchBar'
+import { ErrorBoundary } from 'react-error-boundary'
+
+import navImage from '../../images/Rick_and_Morty.svg'
+import SearchBar from '../SearchBar'
 
 import './Navbar.css'
 
@@ -23,13 +25,23 @@ const NavbarItems = [
   }
 ]
 
+const FallbackLogo = () => {
+  return (
+    <a href='/'>To Home</a>
+  )
+}
+
 export default function Navbar () {
   return (
     <nav className='navbar'>
       <div className='navbar__logo'>
-        <Link to='/'>
-          <img src={navImage} alt='Logo' />
-        </Link>
+        <ErrorBoundary
+          FallbackComponent={FallbackLogo}
+        >
+          <Link to='/'>
+            <img src={navImage} alt='Logo' />
+          </Link>
+        </ErrorBoundary>
       </div>
       <div className='navbar__right'>
         <ul className='navbar__ul'>
