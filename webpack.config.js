@@ -6,7 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const { CleanPlugin, HotModuleReplacementPlugin } = require('webpack')
-const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 
 const config = (env) => {
   const isDevelopment = env.NODE_ENV !== 'production'
@@ -100,7 +99,6 @@ const config = (env) => {
           }
         ]
       }),
-      new NodePolyfillPlugin(),
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: isDevelopment ? 'public/index.dev.html' : 'public/index.html',
