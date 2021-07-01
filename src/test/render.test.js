@@ -3,7 +3,7 @@ import { Suspense } from 'react'
 
 import '@testing-library/jest-dom/extend-expect'
 
-import App from '../src/App'
+import App from '../App'
 
 test('<App /> renders', async () => {
   const renderApp = render(
