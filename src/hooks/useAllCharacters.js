@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
-import { getCharacter } from 'rickmortyapi'
+import { getCharacter } from '../utils/rickAndMorty'
 
 export default function useAllCharacters (page, limit = 12) {
   const [characters, setCharacters] = useState([])
   const [loading, setLoadState] = useState(true)
+  const base = page * limit
 
   useEffect(() => {
-    const base = page * limit
     const IDs = []
     for (let i = 1; i <= limit; i++) {
       IDs.push(base + i)

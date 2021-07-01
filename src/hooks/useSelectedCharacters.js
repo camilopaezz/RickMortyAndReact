@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getCharacter } from 'rickmortyapi'
+import { getCharacter } from '../utils/rickAndMorty'
 
 export default function useSelectedCharacters (ids) {
   const [characters, setCharacters] = useState([])

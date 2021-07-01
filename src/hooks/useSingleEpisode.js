@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getEpisode } from 'rickmortyapi'
+import { getEpisode } from '../utils/rickAndMorty'
 
 export default function useSingleEpisode (id) {
   const [episodeData, setEpisodeData] = useState({})

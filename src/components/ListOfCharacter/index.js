@@ -21,7 +21,7 @@ export default function ListOfCharacters ({ page, name = null }) {
         <div className='listOfCharacters'>
           <div className='listOfCharacters'>
             {characters.map((character) => (
-              <CharacterCard data={character} key={character.id} />
+              <CharacterCard data={character} key={character.created} />
             ))}
           </div>
         </div>

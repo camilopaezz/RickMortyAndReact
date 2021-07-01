@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getEpisode } from 'rickmortyapi'
+import { getEpisode } from '../utils/rickAndMorty'
 
 export default function useAllEpisodes (page, limit = 12) {
   const [episodes, setEpisodes] = useState([])

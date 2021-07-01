@@ -11,8 +11,6 @@ test('<App /> renders', async () => {
       <App />
     </Suspense>
   )
-
-  await waitFor(() => {
-    expect(renderApp.getByText('Hola')).toBeInTheDocument()
-  })
+  const element = await waitFor(() => renderApp.getByText('Welcome to Rick Morty And React'))
+  expect(element).toBeInTheDocument()
 })

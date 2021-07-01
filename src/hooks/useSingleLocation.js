@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getLocation } from 'rickmortyapi'
+import { getLocation } from '../utils/rickAndMorty'
 
 export default function useSingleLocation (id) {
   const [locationData, setLocationData] = useState({})
