@@ -1,24 +1,32 @@
-.listCharactersCompact__container {
-  max-width: 700px;
+.listEpisodesCompact__container {
+  display: grid;
+  max-width: 900px;
+  gap: 45px;
   margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 850px) {
+  .listEpisodesCompact__container {
+    grid-template-columns: 1fr;
+    max-width: 550px;
+  }
 }
 
 .listContainer {
   min-height: 100vh;
 }
 
-.listOfCharacters {
-  display: flex;
-  flex-wrap: wrap;
+.listOfEpisodes {
   width: 100%;
   max-width: 1500px;
   justify-content: center;
   margin: 0 auto;
 }
 
-.listOfCharacters__item {
+.listOfEpisodes__item {
   margin: 30px;
-  background-color: #191919;
+  background-color: #202020;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow-y: hidden;
@@ -26,12 +34,12 @@
   width: 250px;
 }
 
-.listOfCharacters__item img {
+.listOfEpisodes__item img {
   width: 250px;
   height: 250px;
 }
 
-.listOfCharacters__item {
+.listOfEpisodes__item {
   color: white;
   text-decoration: none;
   font-weight: 400;
@@ -39,8 +47,8 @@
   transition-property: opacity transform;
 }
 
-.listOfCharacters__item:hover,
-.listOfCharacters__item:focus-within {
+.listOfEpisodes__item:hover,
+.listOfEpisodes__item:focus-within {
   opacity: 0.8;
   transform: translateY(-5px);
 }

@@ -1,5 +1,8 @@
 .navbar {
   display: flex;
+  position: sticky;
+  z-index: 99;
+  top: 0;
   background-color: #202020;
   align-items: center;
   justify-content: space-between;
@@ -7,6 +10,7 @@
   padding-right: 4%;
   flex-wrap: wrap;
   margin-bottom: 40px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .navbar li {
@@ -58,6 +62,7 @@
 
 @media screen and (max-width: 1060px) {
   .navbar {
+    position: initial;
     justify-content: center;
     padding-block-start: 30px;
     padding-block-end: 30px;

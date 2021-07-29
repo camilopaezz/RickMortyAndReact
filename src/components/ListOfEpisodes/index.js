@@ -13,7 +13,7 @@ export default function ListOfEpisodes ({ page }) {
 
   if (!loading) {
     return (
-      <div className='listCharactersCompact__container'>
+      <div className='listEpisodesCompact__container'>
         {episodes.map((episode) => (
           <EpisodeCard data={episode} key={episode.id} />
         ))}

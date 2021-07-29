@@ -1,5 +1,7 @@
 import CharacterCardCompact from '../CharacterCardCompact'
 
+import './ListOfCharactersCompact.css'
+
 const defaultInfo = [
   {
     created: '2017-11-30T11:02:41.935Z',
@@ -58,7 +60,7 @@ const defaultInfo = [
   }
 ]
 
-export default function ListOfCharactersCompact ({ ids }) {
+export default function ListOfCharactersCompact () {
   const characters = defaultInfo
 
   return (

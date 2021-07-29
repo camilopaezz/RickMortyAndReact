@@ -3,7 +3,7 @@ import './EpisodeCard.css'
 function EpisodeCard ({ data }) {
   return (
     <div className='x' to={`/character/${data.id}`}>
-      <div className='characterCompact'>
+      <div className='episodeCompact'>
         <h2>
           {data.name}
         </h2>
