@@ -1,16 +1,14 @@
 import getHistory from '../../utils/getHistory'
+import ListOfCharacters from '../../components/ListOfCharacters'
 import Logo from '../../images/react.svg'
 
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
-import ListOfCharactersCompact from '../../components/ListOfCharactersCompact'
 
 import './HomePage.css'
 
 export default function HomePage () {
   const history = getHistory()
-  const randomIds = [65, 24, 150, 170]
-
   const historyEmpty = history.length === 0 ? <p>Nothing here...</p> : null
 
   return (
@@ -27,7 +25,7 @@ export default function HomePage () {
         <div className='home__content'>
           <div className='content__recommended'>
             <h2>Some interesting Characters</h2>
-            <ListOfCharactersCompact ids={randomIds} />
+            <ListOfCharacters limit={4} type='compact' />
           </div>
           <div className='content__history'>
             <h2>Latest Search</h2>

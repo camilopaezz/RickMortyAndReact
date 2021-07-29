@@ -1,4 +1,4 @@
-import ListOfCharacters from '../../components/ListOfCharacter'
+import ListOfCharacters from '../../components/ListOfCharacters'
 import { useEffect, useRef, useState } from 'react'
 import useObserver from '../../hooks/useObserver'
 import { Helmet } from 'react-helmet'

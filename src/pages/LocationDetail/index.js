@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import useSingleLocation from '../../hooks/useSingleLocation'
 import Loading from '../../components/Loading'
-import ListOfCharactersCompact from '../../components/ListOfCharactersCompact'
+import ListOfCharacters from '../../components/ListOfCharacters'
 import { Helmet } from 'react-helmet'
 
 import './LocationDetail.css'
@@ -42,7 +42,7 @@ export default function LocationDetail () {
             </p>
           </div>
           <div className='content__residents'>
-            <ListOfCharactersCompact ids={ids} />
+            <ListOfCharacters type='compact' ids={ids} />
           </div>
         </div>
       </div>
