@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import useNetwork from '../../hooks/useNetwork'
 
 import navImage from '../../images/Rick_and_Morty.svg'
 import SearchBar from '../SearchBar'
@@ -25,23 +26,34 @@ const NavbarItems = [
 ]
 
 export default function Navbar () {
+  const isOnline = useNetwork()
+
   return (
-    <nav className='navbar'>
-      <div className='navbar__logo'>
-        <Link to='/'>
-          <img src={navImage} alt='Logo' />
-        </Link>
-      </div>
-      <div className='navbar__right'>
-        <ul className='navbar__ul'>
-          {NavbarItems.map(({ text, to }) => (
-            <li key={text} className='navbar__item'>
-              <Link to={to}>{text}</Link>
-            </li>
-          ))}
-        </ul>
-        <SearchBar />
-      </div>
-    </nav>
+    <>
+      <nav className='navbar'>
+        <div className='navbar__logo'>
+          <Link to='/'>
+            <img src={navImage} alt='Logo' />
+          </Link>
+        </div>
+        <div className='navbar__right'>
+          <ul className='navbar__ul'>
+            {NavbarItems.map(({ text, to }) => (
+              <li key={text} className='navbar__item'>
+                <Link to={to}>{text}</Link>
+              </li>
+            ))}
+          </ul>
+          <SearchBar />
+        </div>
+      </nav>
+      {
+        !isOnline && (
+          <div className='online'>
+            You are offline
+          </div>
+        )
+      }
+    </>
   )
 }

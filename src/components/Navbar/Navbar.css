@@ -9,7 +9,6 @@
   padding-left: 4%;
   padding-right: 4%;
   flex-wrap: wrap;
-  margin-bottom: 40px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -60,6 +59,14 @@
   transform: translateY(-2px);
 }
 
+.online {
+  background-color: #e42828;
+  position: fixed;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 @media screen and (max-width: 1060px) {
   .navbar {
     position: initial;
@@ -79,5 +86,11 @@
 
   .navbar__logo img {
     height: 80px;
+  }
+
+  .online {
+    position: sticky;
+    z-index: 99;
+    top: 0;
   }
 }
