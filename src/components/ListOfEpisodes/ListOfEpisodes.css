@@ -2,6 +2,8 @@
   display: grid;
   max-width: 900px;
   gap: 45px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin: 0 auto;
   grid-template-columns: 1fr 1fr;
 }

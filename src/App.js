@@ -1,3 +1,4 @@
+// KANYE PLEASE DROP DONDA
 import React from 'react'
 import Helmet from 'react-helmet'
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
