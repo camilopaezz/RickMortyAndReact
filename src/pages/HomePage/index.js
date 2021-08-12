@@ -16,18 +16,18 @@ export default function HomePage () {
       <Helmet>
         <title>Rick Morty And React</title>
       </Helmet>
-      <div className='home'>
+      <main className='home'>
         <h1>
           Welcome to Rick Morty And React
           <img src={Logo} alt='React' className='react-logo' />
         </h1>
         <p>This is react-app that use the fantastic RickAndMortyAPI</p>
-        <div className='home__content'>
-          <div className='content__recommended'>
+        <section className='home__content'>
+          <article className='content__recommended'>
             <h2>Some interesting Characters</h2>
             <ListOfCharacters limit={4} type='compact' />
-          </div>
-          <div className='content__history'>
+          </article>
+          <article className='content__history'>
             <h2>Latest Search</h2>
             {
             historyEmpty
@@ -42,9 +42,9 @@ export default function HomePage () {
               )
             })
           }
-          </div>
-        </div>
-      </div>
+          </article>
+        </section>
+      </main>
     </>
   )
 }

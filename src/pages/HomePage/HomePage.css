@@ -38,6 +38,7 @@
 
 .content__recommended {
   grid-area: characters;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1025px) {
