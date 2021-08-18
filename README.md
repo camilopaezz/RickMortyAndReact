@@ -2,6 +2,7 @@
 # Rick Morty and React
 
 A react-app that use the fantastic RickAndMortyAPI
+
 ## 🤖 Run Locally
 
 Clone the project
@@ -35,6 +36,10 @@ Start the server
 ```
 
 Happy Hacking!
+
+## To consider
+
+If some change is not reflect probably is the Service Worker, just cleanup the cache
 
 ## 📝 TO DO
 

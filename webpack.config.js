@@ -10,7 +10,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { ESBuildMinifyPlugin } = require('esbuild-loader')
 
 const config = (env) => {
-  const isDevelopment = env.NODE_ENV !== 'production'
+  const isDevelopment = env.NODE_ENV === 'development'
   const isAnalyze = env.NODE_ENV === 'analyze'
 
   return {
@@ -113,7 +113,7 @@ const config = (env) => {
         }),
       new HtmlWebpackPlugin({
         filename: 'index.html',
-        template: 'public/index.html',
+        template: isDevelopment ? 'public/index.dev.html' : 'public/index.html',
         inject: true
       }),
       new MiniCssExtractPlugin({

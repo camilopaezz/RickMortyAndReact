@@ -1,4 +1,4 @@
-import notFound from '../../images/notFound.png'
+import notFound from '../../images/teddy-rick.png'
 import './Error404.css'
 import { Helmet } from 'react-helmet'
 
