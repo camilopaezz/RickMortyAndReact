@@ -2,25 +2,43 @@
 # Rick Morty and React
 
 A react-app that use the fantastic RickAndMortyAPI
+## 🤖 Run Locally
 
-## 🤖 Quick Start
+Clone the project
 
-1. Install dependencies
-
-```sh
-yarn
+```bash
+  git clone https://github.com/camilopaezz/RickMortyAndReact.git
 ```
 
-2. Init Gitmoji hook
+Go to the project directory
 
-```sh
-npx gitmoji --init
+```bash
+  cd RickMortyAndReact
 ```
 
-3. Start the project
+Install dependencies
 
-```sh
-yarn dev
+```bash
+  yarn install
+```
+
+Add gitmoji hook
+
+```bash
+  npx gitmoji-cli -i
+```
+
+Start the server
+
+```bash
+  npm run dev
 ```
 
 Happy Hacking!
+
+## 📝 TO DO
+
+- **feat:** Offline banner auto hide when user is online again
+- **feat:** Redesign navbar on mobile
+- **feat:** Add GitHub repository link on navbar
+- **fix:** characterCard on hover cover the offline banner
