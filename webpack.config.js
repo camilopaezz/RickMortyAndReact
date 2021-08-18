@@ -11,6 +11,7 @@ const { ESBuildMinifyPlugin } = require('esbuild-loader')
 
 const config = (env) => {
   const isDevelopment = env.NODE_ENV !== 'production'
+  const isAnalyze = env.NODE_ENV === 'analyze'
 
   return {
     entry: ['./src/index.js'],
@@ -129,7 +130,7 @@ const config = (env) => {
       }),
       isDevelopment && new HotModuleReplacementPlugin(),
       isDevelopment && new ReactRefreshWebpackPlugin(),
-      isDevelopment && new BundleAnalyzerPlugin()
+      isAnalyze && new BundleAnalyzerPlugin()
     ].filter(Boolean)
   }
 }
