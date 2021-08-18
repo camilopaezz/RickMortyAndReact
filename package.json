@@ -11,8 +11,7 @@
     "react-router-dom": "5.2.0"
   },
   "scripts": {
-    "build:dev": "webpack --env NODE_ENV=development",
-    "build:prod": "webpack --env NODE_ENV=production",
+    "build": "webpack --env NODE_ENV=production",
     "dev": "webpack serve --env NODE_ENV=development",
     "test": "jest --silent",
     "lint": "standard --fix"
@@ -20,26 +19,22 @@
   "author": "Camilo Paez <camilopaez.dev@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "7.14.8",
-    "@babel/plugin-transform-async-to-generator": "7.14.5",
-    "@babel/plugin-transform-runtime": "7.14.5",
-    "@babel/preset-env": "7.14.9",
-    "@babel/preset-react": "7.14.5",
-    "@babel/runtime": "7.14.8",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
+    "@swc/core": "1.2.78",
+    "@swc/jest": "0.2.2",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "12.0.0",
-    "babel-jest": "27.0.6",
-    "babel-loader": "8.2.2",
-    "babel-plugin-module-resolver": "4.1.0",
     "copy-webpack-plugin": "9.0.1",
     "css-loader": "6.2.0",
+    "esbuild-loader": "2.15.0",
     "html-webpack-plugin": "5.3.1",
     "jest": "27.0.6",
     "mini-css-extract-plugin": "2.1.0",
     "react-refresh": "0.10.0",
     "standard": "16.0.3",
+    "swc-loader": "0.1.14",
     "webpack": "5.48.0",
+    "webpack-bundle-analyzer": "4.4.2",
     "webpack-cli": "4.7.2",
     "webpack-dev-server": "3.11.2",
     "workbox-webpack-plugin": "6.1.5"
@@ -50,13 +45,6 @@
     ],
     "env": {
       "jest": true
-    }
-  },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__mocks__/fileMock.js",
-      "\\.(css|less)$": "<rootDir>/src/__mocks__/styleMock.js"
     }
   }
 }

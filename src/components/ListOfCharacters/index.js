@@ -19,8 +19,12 @@ export default function ListOfCharacters ({ page = 26, type, limit, name = null 
   if (type === 'compact') {
     return (
       <div className='listCharactersCompact__container'>
-        {characters.map((character) => (
-          <CharacterCard type='compact' data={character} key={character.id} />
+        {characters.map((character, index) => (
+          <CharacterCard
+            type='compact'
+            data={character}
+            key={index}
+          />
         ))}
       </div>
     )
@@ -28,8 +32,8 @@ export default function ListOfCharacters ({ page = 26, type, limit, name = null 
 
   return (
     <div className='listOfCharacters'>
-      {characters.map((character) => (
-        <CharacterCard data={character} key={character.created} />
+      {characters.map((character, index) => (
+        <CharacterCard data={character} key={index} />
       ))}
     </div>
   )

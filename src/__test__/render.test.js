@@ -1,5 +1,5 @@
 import { render, waitFor } from '@testing-library/react'
-import { Suspense } from 'react'
+import React, { Suspense } from 'react'
 
 import '@testing-library/jest-dom/extend-expect'
 

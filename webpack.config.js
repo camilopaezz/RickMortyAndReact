@@ -6,6 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const { CleanPlugin, HotModuleReplacementPlugin } = require('webpack')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const { ESBuildMinifyPlugin } = require('esbuild-loader')
 
 const config = (env) => {
   const isDevelopment = env.NODE_ENV !== 'production'
@@ -22,7 +24,9 @@ const config = (env) => {
       rules: [
         {
           test: /\.(js|jsx)$/,
-          use: ['babel-loader'],
+          use: {
+            loader: 'swc-loader'
+          },
           exclude: /node_modules/,
           include: /src/
         },
@@ -64,41 +68,48 @@ const config = (env) => {
     optimization: {
       splitChunks: {
         chunks: 'all'
-      }
+      },
+      minimizer: [
+        new ESBuildMinifyPlugin({
+          target: 'es2016',
+          css: true
+        })
+      ]
     },
     plugins: [
-      !isDevelopment && new WorkboxPlugin.GenerateSW({
-        runtimeCaching: [
-          {
-            urlPattern: /.(jpg|png|svg)/,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'images'
+      !isDevelopment &&
+        new WorkboxPlugin.GenerateSW({
+          runtimeCaching: [
+            {
+              urlPattern: /.(jpg|png|svg)/,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'images'
+              }
+            },
+            {
+              urlPattern: /.(woff|woff2|ttf)/,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'fonts'
+              }
+            },
+            {
+              urlPattern: /.(css|html|js)/,
+              handler: 'NetworkFirst',
+              options: {
+                cacheName: 'assets'
+              }
+            },
+            {
+              urlPattern: /https:$/i,
+              handler: 'NetworkFirst',
+              options: {
+                cacheName: 'external'
+              }
             }
-          },
-          {
-            urlPattern: /.(woff|woff2|ttf)/,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'fonts'
-            }
-          },
-          {
-            urlPattern: /.(css|html|js)/,
-            handler: 'NetworkFirst',
-            options: {
-              cacheName: 'assets'
-            }
-          },
-          {
-            urlPattern: /https:$/i,
-            handler: 'NetworkFirst',
-            options: {
-              cacheName: 'external'
-            }
-          }
-        ]
-      }),
+          ]
+        }),
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: isDevelopment ? 'public/index.dev.html' : 'public/index.html',
@@ -116,8 +127,9 @@ const config = (env) => {
           { from: 'public/favicon.png', to: 'favicon.png' }
         ]
       }),
-      isDevelopment ? new HotModuleReplacementPlugin() : false,
-      isDevelopment ? new ReactRefreshWebpackPlugin() : false
+      isDevelopment && new HotModuleReplacementPlugin(),
+      isDevelopment && new ReactRefreshWebpackPlugin(),
+      new BundleAnalyzerPlugin()
     ].filter(Boolean)
   }
 }
