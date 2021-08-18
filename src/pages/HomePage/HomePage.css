@@ -18,10 +18,11 @@
 
 .home__top {
   display: flex;
-  margin-bottom: 20px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .top__title {
