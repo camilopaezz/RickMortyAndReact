@@ -1,0 +1,10 @@
+{
+  "extends": ["standard", "standard-jsx", "standard-react"],
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "react/prop-types": 0
+  },
+  "env": {
+    "jest": true
+  }
+}

@@ -14,7 +14,8 @@
     "build": "webpack --env NODE_ENV=production",
     "dev": "webpack serve --env NODE_ENV=development",
     "test": "jest --silent",
-    "lint": "standard --fix"
+    "lint": "eslint src/ --cache",
+    "lint:fix": "eslint src/ --fix --cache"
   },
   "author": "Camilo Paez <camilopaez.dev@gmail.com>",
   "license": "MIT",
@@ -27,24 +28,23 @@
     "copy-webpack-plugin": "9.0.1",
     "css-loader": "6.2.0",
     "esbuild-loader": "2.15.0",
+    "eslint": "7.32.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-config-standard-jsx": "10.0.0",
+    "eslint-config-standard-react": "11.0.1",
+    "eslint-plugin-import": "2.24.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "5.1.0",
+    "eslint-plugin-react": "7.24.0",
     "html-webpack-plugin": "5.3.1",
     "jest": "27.0.6",
     "mini-css-extract-plugin": "2.1.0",
     "react-refresh": "0.10.0",
-    "standard": "16.0.3",
     "swc-loader": "0.1.14",
     "webpack": "5.48.0",
     "webpack-bundle-analyzer": "4.4.2",
     "webpack-cli": "4.7.2",
     "webpack-dev-server": "3.11.2",
     "workbox-webpack-plugin": "6.1.5"
-  },
-  "eslintConfig": {
-    "extends": [
-      "./node_modules/standard/eslintrc.json"
-    ],
-    "env": {
-      "jest": true
-    }
   }
 }

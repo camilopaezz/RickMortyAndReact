@@ -112,7 +112,7 @@ const config = (env) => {
         }),
       new HtmlWebpackPlugin({
         filename: 'index.html',
-        template: isDevelopment ? 'public/index.dev.html' : 'public/index.html',
+        template: 'public/index.html',
         inject: true
       }),
       new MiniCssExtractPlugin({
