@@ -41,4 +41,6 @@ Happy Hacking!
 - **feat:** Offline banner auto hide when user is online again
 - **feat:** Redesign navbar on mobile
 - **feat:** Add GitHub repository link on navbar
+- **feat:** Verify accessibility using jest-axe
+- **ci:** Add automatic release to Vercel using Github Actions and semantic release (for save unnecessary build times)
 - **fix:** characterCard on hover cover the offline banner
