@@ -1,6 +1,7 @@
 import getHistory from '../../utils/getHistory'
 import ListOfCharacters from '../../components/ListOfCharacters'
 import Logo from '../../images/react.svg'
+import PickleRick from '../../images/duct-tape-pickle-rick.svg'
 
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
@@ -22,6 +23,7 @@ export default function HomePage () {
           <img src={Logo} alt='React' className='react-logo' />
         </h1>
         <p>This is react-app that use the fantastic RickAndMortyAPI</p>
+        <img className='home__pickle' width='200px' src={PickleRick} alt='' />
         <section className='home__content'>
           <article className='content__recommended'>
             <h2>Some interesting Characters</h2>

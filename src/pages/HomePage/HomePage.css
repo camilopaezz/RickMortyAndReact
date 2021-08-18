@@ -1,7 +1,13 @@
+.home {
+  margin-top: 40px;
+}
+
 .home h1 {
   margin-top: 55px;
   margin-bottom: 25px;
   display: flex;
+  margin: 0 auto;
+  max-width: 600px;
   justify-content: center;
   align-items: center;
   padding: 0 5%;
@@ -9,7 +15,32 @@
 
 .home > p {
   color: #aaa;
+}
+
+.home__pickle {
+  margin-top: 60px;
   margin-bottom: 60px;
+  width: 90%;
+  max-width: 350px;
+  animation: ease-in infinite 5s little_spin;
+}
+
+@keyframes little_spin {
+  0% {
+    transform: rotate(15deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(15deg) translateY(15px);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
 }
 
 .home__content {
