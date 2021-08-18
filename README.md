@@ -19,7 +19,7 @@ Go to the project directory
 Install dependencies
 
 ```bash
-  yarn install
+  yarn
 ```
 
 Add gitmoji hook
@@ -31,7 +31,7 @@ Add gitmoji hook
 Start the server
 
 ```bash
-  npm run dev
+  yarn dev
 ```
 
 Happy Hacking!
