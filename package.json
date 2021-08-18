@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "webpack --env NODE_ENV=production",
-    "bundle:analyze": "webpack --env NODE_ENV=development",
+    "bundle:analyze": "webpack --env NODE_ENV=analyze",
     "dev": "webpack serve --env NODE_ENV=development",
     "lint:fix": "eslint src/ --fix --cache",
     "lint": "eslint src/ --cache",
@@ -37,15 +37,15 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "5.1.0",
     "eslint-plugin-react": "7.24.0",
-    "html-webpack-plugin": "5.3.1",
+    "html-webpack-plugin": "5.3.2",
     "jest": "27.0.6",
-    "mini-css-extract-plugin": "2.1.0",
+    "mini-css-extract-plugin": "2.2.0",
     "react-refresh": "0.10.0",
     "swc-loader": "0.1.14",
-    "webpack": "5.48.0",
+    "webpack": "5.50.0",
     "webpack-bundle-analyzer": "4.4.2",
-    "webpack-cli": "4.7.2",
+    "webpack-cli": "4.8.0",
     "webpack-dev-server": "3.11.2",
-    "workbox-webpack-plugin": "6.1.5"
+    "workbox-webpack-plugin": "6.2.4"
   }
 }
