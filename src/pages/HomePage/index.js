@@ -1,6 +1,5 @@
 import getHistory from '../../utils/getHistory'
 import ListOfCharacters from '../../components/ListOfCharacters'
-import Logo from '../../images/react.svg'
 import PickleRick from '../../images/duct-tape-pickle-rick.svg'
 
 import { Helmet } from 'react-helmet'
@@ -18,12 +17,15 @@ export default function HomePage () {
         <title>Rick Morty And React</title>
       </Helmet>
       <main className='home'>
-        <h1>
-          Welcome to Rick Morty And React
-          <img src={Logo} alt='React' className='react-logo' />
-        </h1>
-        <p>This is react-app that use the fantastic RickAndMortyAPI</p>
-        <img className='home__pickle' width='200px' src={PickleRick} alt='' />
+        <div className='home__top'>
+          <div className='top__title'>
+            <h1>
+              Welcome to Rick Morty And React
+            </h1>
+            <p>This is react-app that use the fantastic RickAndMortyAPI</p>
+          </div>
+          <img className='home__pickle' width='200px' src={PickleRick} alt='' />
+        </div>
         <section className='home__content'>
           <article className='content__recommended'>
             <h2>Some interesting Characters</h2>
