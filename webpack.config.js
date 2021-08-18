@@ -97,14 +97,14 @@ const config = (env) => {
             },
             {
               urlPattern: /.(css|html|js)/,
-              handler: 'NetworkFirst',
+              handler: 'StaleWhileRevalidate',
               options: {
                 cacheName: 'assets'
               }
             },
             {
               urlPattern: /https:$/i,
-              handler: 'NetworkFirst',
+              handler: 'StaleWhileRevalidate',
               options: {
                 cacheName: 'external'
               }
