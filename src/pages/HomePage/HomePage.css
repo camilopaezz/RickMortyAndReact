@@ -20,7 +20,7 @@
 .home__pickle {
   margin-top: 60px;
   margin-bottom: 60px;
-  width: 90%;
+  width: 70%;
   max-width: 350px;
   animation: ease-in infinite 5s little_spin;
 }
