@@ -12,10 +12,11 @@
   },
   "scripts": {
     "build": "webpack --env NODE_ENV=production",
+    "bundle:analyze": "webpack --env NODE_ENV=development",
     "dev": "webpack serve --env NODE_ENV=development",
-    "test": "jest --silent",
+    "lint:fix": "eslint src/ --fix --cache",
     "lint": "eslint src/ --cache",
-    "lint:fix": "eslint src/ --fix --cache"
+    "test": "jest --silent"
   },
   "author": "Camilo Paez <camilopaez.dev@gmail.com>",
   "license": "MIT",

@@ -129,7 +129,7 @@ const config = (env) => {
       }),
       isDevelopment && new HotModuleReplacementPlugin(),
       isDevelopment && new ReactRefreshWebpackPlugin(),
-      new BundleAnalyzerPlugin()
+      isDevelopment && new BundleAnalyzerPlugin()
     ].filter(Boolean)
   }
 }
