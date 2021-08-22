@@ -18,7 +18,7 @@ export default function CharactersPage () {
     if (ref.current) {
       ref.current.style.display = 'block'
     }
-  }, 1000)
+  }, 400)
 
   return (
     <>
