@@ -1,0 +1,44 @@
+name: Deployment Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: yarn
+      - name: Lint
+        run: yarn run lint
+      - name: Build
+        run: yarn run build
+      - name: Test
+        run: yarn run test
+      - name: Test e2e
+        uses: cypress-io/github-action@v2
+        with:
+          command: yarn run test:e2e
+          start: yarn run serve
+          wait-on: http://localhost:3000
+      - name: Deploy on Vercel
+        if: ${{ github.event_name == 'push' }}
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-args: '--prod'
+          vercel-org-id: ${{ secrets.ORG_ID}}
+          vercel-project-id: ${{ secrets.PROJECT_ID}}
