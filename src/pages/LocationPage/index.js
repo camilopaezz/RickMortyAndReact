@@ -18,7 +18,7 @@ export default function LocationPage () {
     if (ref.current) {
       ref.current.style.display = 'block'
     }
-  }, 600)
+  }, 1000)
 
   return (
     <>
