@@ -13,7 +13,7 @@
   "scripts": {
     "build": "webpack --env NODE_ENV=production",
     "bundle:analyze": "webpack --env NODE_ENV=analyze",
-    "cy:open": "cypress open",
+    "cy:open": "npx cypress open",
     "serve": "serve build -s -p 3000",
     "dev": "webpack serve --env NODE_ENV=development",
     "lint:fix": "eslint src/ --fix --cache",
