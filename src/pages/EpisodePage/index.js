@@ -18,7 +18,7 @@ export default function EpisodesPage () {
     if (ref.current) {
       ref.current.style.display = 'block'
     }
-  }, 400)
+  }, 1000)
 
   return (
     <>
