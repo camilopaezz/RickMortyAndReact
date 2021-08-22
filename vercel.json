@@ -1,6 +1,3 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
-  "github": {
-    "enabled": false
-  }
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }

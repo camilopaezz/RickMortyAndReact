@@ -25,7 +25,7 @@ export default function SearchPage () {
     if (ref.current) {
       ref.current.style.display = 'block'
     }
-  }, 1000)
+  }, 600)
 
   return (
     <>
