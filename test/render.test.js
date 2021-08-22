@@ -3,7 +3,7 @@ import React, { Suspense } from 'react'
 
 import '@testing-library/jest-dom/extend-expect'
 
-import App from '../App'
+import App from '../src/App'
 
 // someday i will add more test...
 
