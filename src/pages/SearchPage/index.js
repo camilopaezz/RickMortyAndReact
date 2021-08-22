@@ -32,7 +32,7 @@ export default function SearchPage () {
       <Helmet>
         <title>{`Results of ${name} | Rick Morty And React`}</title>
       </Helmet>
-      <h1>Resultados de búsqueda de {name}</h1>
+      <h1>Search results of {name}</h1>
       <div>
         <ListOfCharacters name={name} page={page} />
       </div>
