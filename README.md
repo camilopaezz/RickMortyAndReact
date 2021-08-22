@@ -46,6 +46,5 @@ If some change is not reflect probably is the Service Worker, just cleanup the c
 - **feat:** Offline banner auto hide when user is online again
 - **feat:** Redesign navbar on mobile
 - **feat:** Add GitHub repository link on navbar
-- **feat:** Verify accessibility using jest-axe
-- **ci:** Add automatic release to Vercel using Github Actions and semantic release (for save unnecessary build times)
+- **test:** Verify accessibility using jest-axe
 - **fix:** characterCard on hover cover the offline banner
